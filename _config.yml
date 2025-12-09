@@ -6,6 +6,8 @@ theme: jekyll-serif-theme
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme
+remote_theme: https://github.com/zerostaticthemes/jekyll-serif-theme
 navigation:
   - title: "Главная"
     url: "/"
