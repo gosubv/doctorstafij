@@ -1,21 +1,8 @@
+
 title: "Доктор Стафий"
 description: "Эндокринолог и нутрициолог Стафий Диана Викторовна"
 baseurl: ""
 url: "https://doctorstafiy.ru"
 theme: jekyll-serif-theme
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-remote-theme
-remote_theme: https://github.com/zerostaticthemes/jekyll-serif-theme
-navigation:
-  - title: "Главная"
-    url: "/"
-  - title: "О враче"
-    url: "/about"
-  - title: "Услуги"
-    url: "/services"
-  - title: "Отзывы"
-    url: "/reviews"
-  - title: "Записаться"
-    url: "/appointment"
