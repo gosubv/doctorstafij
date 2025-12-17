@@ -4,7 +4,7 @@ description: "Эндокринолог и нутрициолог Стафий Д
 baseurl: ""
 url: "https://doctorstafiy.ru"
 # remote_theme: https://github.com/zerostaticthemes/jekyll-serif-theme #
-theme: cayman
+remote_theme: pages-themes/cayman@v0.2.0
 plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme
