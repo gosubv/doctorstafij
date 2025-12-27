@@ -1,7 +1,7 @@
 
 title: "Доктор Стафий"
 description: "Эндокринолог и нутрициолог Стафий Диана Викторовна"
-baseurl: ""
+baseurl: "/"
 url: "https://gosubv.github.io/doctorstafij/"
 remote_theme: https://github.com/zerostaticthemes/jekyll-serif-theme
 plugins:
