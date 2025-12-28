@@ -21,5 +21,8 @@ navigation:
   - title: Записаться
     url: /booking/
     highlight: true
-    
+
+instagram_username: dianastafiy
+instagram_url: "https://www.instagram.com/dianastafiy/"
+
 theme: minima
