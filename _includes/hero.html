@@ -3,3 +3,14 @@
     {{ page.hero.badge }}
   </div>
 {% endif %}
+
+{% if page.hero.stats %}
+<div class="hero-stats">
+  {% for stat in page.hero.stats %}
+    <div class="hero-stat">
+      <div class="hero-stat__value">{{ stat.value }}</div>
+      <div class="hero-stat__label">{{ stat.label }}</div>
+    </div>
+  {% endfor %}
+</div>
+{% endif %}
