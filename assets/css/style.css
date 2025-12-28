@@ -30,16 +30,17 @@
   align-items: center;
 }
 
-.hero__badge {
+.hero-badge {
   display: inline-block;
-  background: #eef2ff;
-  color: #3730a3;
+  margin: 12px 0 8px;
   padding: 6px 14px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
   border-radius: 999px;
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 16px;
 }
+
 
 .hero__title {
   font-size: 48px;
