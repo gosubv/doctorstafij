@@ -34,7 +34,7 @@ title: Главная
   </div>
 
   <div class="hero__image">
-    <img src="/assets/images/doctor-stafiy.jpg" alt="Доктор Стафий">
+    <img src="/images/doctor.png" alt="Доктор Стафий">
   </div>
 </section>
 
