@@ -6,3 +6,15 @@ remote_theme: https://github.com/zerostaticthemes/jekyll-serif-theme
 plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme
+  - jekyll-feed
+navigation:
+  - title: "Главная"
+    url: "/"
+  - title: "О враче"
+    url: "/about"
+  - title: "Услуги"
+    url: "/services"
+  - title: "Отзывы"
+    url: "/reviews"
+  - title: "Записаться"
+    url: "/appointment"
