@@ -1,7 +1,13 @@
-title: Доктор Стафий
+---
 layout: home
-description: Главная
-intro_image: "images/doctor.png"
-intro_image_absolute: true
-intro_image_hide_on_mobile: true
-show_call_box: true
+title: Главная
+---
+
+# Добро пожаловать в практику "Доктор Стафий"
+
+Эндокринолог и нутрициолог **Стафий Диана Викторовна** предлагает индивидуальный подход к каждому пациенту, диагностику и лечение эндокринных заболеваний, коррекцию веса и нутрициологическое сопровождение.
+
+[Записаться на прием](appointment.html){:.btn}
+
+## Instagram
+{% include instagram.html username="dianastafiy" %}
