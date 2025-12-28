@@ -37,6 +37,81 @@ body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: var(--text-
   margin-top: 30px;
 }
 
+/* Стили для страницы Услуг */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.service-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.service-card.highlighted {
+  background: #f9fbfb;
+  border-left: 5px solid var(--accent-color);
+}
+
+.service-info h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.service-info p {
+  margin: 0;
+  color: #666;
+  max-width: 600px;
+}
+
+.service-details {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  font-size: 0.85rem;
+  color: var(--accent-color);
+  display: flex;
+  gap: 15px;
+}
+
+.service-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--text-color);
+  white-space: nowrap;
+  margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .service-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .service-price {
+    margin-left: 0;
+    margin-top: 15px;
+    font-size: 1.2rem;
+  }
+  .service-info p {
+    font-size: 0.9rem;
+  }
+}
+
 .cert-item {
   background: #fff;
   border: 1px solid #eee;
