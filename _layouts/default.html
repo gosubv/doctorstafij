@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a class="site-title" href="/">{{ site.title }}</a>
+      <div class="nav-links">
+        {% for link in site.navigation %}
+          <a href="{{ link.url | relative_url }}" class="{% if link.highlight %}btn-nav{% endif %}">
+            {{ link.title }}
+          </a>
+        {% endfor %}
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Доктор Стафий Диана Викторовна. Эндокринолог, Нутрициолог.</p>
+  </footer>
+</body>
+</html>
