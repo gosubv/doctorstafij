@@ -1,20 +1,23 @@
-
-title: "Доктор Стафий"
-baseurl: "/"
+title: Доктор Стафий
+email: doctor.stafij@gmail.com
+description: >-
+  Эндокринолог-нутрициолог Стафий Диана Викторовна. 
+  Специалист по коррекции гормонального фона и питания.
+baseurl: "" 
 url: "https://gosubv.github.io/doctorstafij/"
-remote_theme: https://github.com/zerostaticthemes/jekyll-serif-theme
-plugins:
-  - jekyll-seo-tag
-  - jekyll-remote-theme
-  - jekyll-feed
+
+# Навигация
 navigation:
-  - title: "Главная"
-    url: "/"
-  - title: "О враче"
-    url: "/about"
-  - title: "Услуги"
-    url: "/services"
-  - title: "Отзывы"
-    url: "/reviews"
-  - title: "Записаться"
-    url: "/appointment"
+  - title: Главная
+    url: /
+  - title: О враче
+    url: /about/
+  - title: Услуги
+    url: /services/
+  - title: Отзывы
+    url: /reviews/
+  - title: Записаться
+    url: /booking/
+    highlight: true
+
+theme: minima
