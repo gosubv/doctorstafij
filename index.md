@@ -18,4 +18,5 @@ title: Главная
     <li><b>Современно:</b> Сочетаю классическую эндокринологию с функциональной нутрициологией.</li>
   </ul>
   <p>Следите за полезными советами в моем <a href="https://www.instagram.com/dianastafiy/">Instagram @dianastafiy</a></p>
+
 </section>
