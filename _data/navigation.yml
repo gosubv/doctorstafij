@@ -1,0 +1,10 @@
+- name: Главная
+  link: /
+- name: О враче
+  link: /about
+- name: Услуги
+  link: /services
+- name: Отзывы
+  link: /reviews
+- name: Записаться
+  link: /appointment
