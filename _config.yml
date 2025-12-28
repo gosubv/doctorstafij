@@ -12,14 +12,14 @@ navigation:
     url: /
   - title: О враче
     url: /about/
-  - title: Сертификаты
-    url: /certificates/
   - title: Услуги
     url: /services/
+  - title: Сертификаты
+    url: /certificates/
   - title: Отзывы
     url: /reviews/
   - title: Записаться
     url: /booking/
     highlight: true
-
+    
 theme: minima
