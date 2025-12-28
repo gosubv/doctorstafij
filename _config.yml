@@ -1,11 +1,5 @@
 
 title: "Доктор Стафий"
-layout: home
-description: "Эндокринолог и нутрициолог Стафий Диана Викторовна"
-intro_image:"images/doctor.png"
-intro_image_absolute: true
-intro_image_hide_on_mobile: true
-show_call_box: true
 baseurl: "/"
 url: "https://gosubv.github.io/doctorstafij/"
 remote_theme: https://github.com/zerostaticthemes/jekyll-serif-theme
