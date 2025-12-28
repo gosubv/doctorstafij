@@ -3,6 +3,41 @@ layout: home
 title: Главная
 ---
 
+<section class="hero">
+  <div class="hero__content">
+    <span class="hero__badge">Врач-эндокринолог · Нутрициолог</span>
+
+    <h1 class="hero__title">
+      Стафий Диана Викторовна
+    </h1>
+
+    <p class="hero__subtitle">
+      Помогаю восстановить гормональный баланс, нормализовать вес  
+      и улучшить качество жизни на основе доказательной медицины
+    </p>
+
+    <div class="hero__actions">
+      <a href="/appointment" class="btn btn-primary">
+        Записаться на приём
+      </a>
+      <a href="/about" class="btn btn-outline">
+        Обо мне
+      </a>
+    </div>
+
+    <ul class="hero__features">
+      <li>✔ Опыт более 10 лет</li>
+      <li>✔ Индивидуальный подход</li>
+      <li>✔ Разбор анализов</li>
+      <li>✔ Онлайн и офлайн приём</li>
+    </ul>
+  </div>
+
+  <div class="hero__image">
+    <img src="/assets/images/doctor-stafiy.jpg" alt="Доктор Стафий">
+  </div>
+</section>
+
 # Доктор Стафий  
 ## Эндокринолог · Нутрициолог
 
