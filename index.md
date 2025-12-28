@@ -10,6 +10,11 @@ hero:
   button:
     text: "Записаться на приём"
     link: "/appointment"
+stats:
+  - value: "10+"
+  label: "лет клинического опыта"
+  - value: "5000+"
+  label: "пациентов"
 
 intro:
   title: "С чем я могу помочь"
