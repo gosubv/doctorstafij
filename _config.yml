@@ -12,6 +12,8 @@ navigation:
     url: /
   - title: О враче
     url: /about/
+  - title: Сертификаты
+    url: /certificates/
   - title: Услуги
     url: /services/
   - title: Отзывы
