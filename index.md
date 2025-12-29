@@ -5,12 +5,12 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 
 <section id="hero" class="hero">
     <div class="container">
-        <span class="badge-online">Приём онлайн</span>
+        <span class="badge-online">Консультация в клинике и онлайн</span>
         <h1 style="font-size: 3.5rem; margin: 20px 0;">Доктор Стафий</h1>
         <p style="font-size: 1.4rem; color: var(--primary); margin-bottom: 40px;">
             Стафий Диана Викторовна — Ваш эксперт в мире гормонального здоровья и осознанного питания.
         </p>
-        <a href="#booking" class="btn-nav" style="padding: 20px 40px; font-size: 1.1rem; text-decoration: none;">Записаться онлайн</a>
+        <a href="#booking" class="btn-nav" style="padding: 20px 40px; font-size: 1.1rem; text-decoration: none;">Онлайн запись на консультацию</a>
     </div>
 </section>
 
