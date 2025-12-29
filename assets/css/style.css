@@ -159,13 +159,12 @@ nav { display: flex; justify-content: space-between; align-items: center; height
 }
 
 /* Адаптивность для мобильных */
-@media (max-width: 850px) {
-    .reviews-grid {
-        grid-template-columns: 1fr; /* На смартфонах в одну колонку */
+@media (max-width: 992px) {
+    .blog-grid { grid-template-columns: 1fr; }
+    .blog-section { padding: 60px 0; }
+    .diploma-card {
+        flex: 0 0 85%; /* На мобильных карточка почти на весь экран */
     }
-}
-
-@media (max-width: 768px) {
     .booking-container iframe {
         height: 500px; /* Уменьшаем высоту для мобильных экранов */
     }
@@ -173,7 +172,11 @@ nav { display: flex; justify-content: space-between; align-items: center; height
     #booking {
         padding: 60px 0;
     }
+    .reviews-grid {
+        grid-template-columns: 1fr; /* На смартфонах в одну колонку */
+    }
 }
+
 
 /* Контейнер карусели */
 .diploma-carousel {
@@ -244,12 +247,6 @@ nav { display: flex; justify-content: space-between; align-items: center; height
     font-weight: 600;
 }
 
-@media (max-width: 600px) {
-    .diploma-card {
-        flex: 0 0 85%; /* На мобильных карточка почти на весь экран */
-    }
-}
-
 .blog-section {
     padding: 100px 0;
     background-color: #ffffff;
@@ -306,9 +303,4 @@ nav { display: flex; justify-content: space-between; align-items: center; height
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-@media (max-width: 992px) {
-    .blog-grid { grid-template-columns: 1fr; }
-    .blog-section { padding: 60px 0; }
 }
