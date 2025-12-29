@@ -66,15 +66,36 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
     </div>
 </section>
 
-<section id="reviews">
+<section id="reviews" style="background: var(--bg-light);">
     <div class="container">
-        <h2>Отзывы</h2>
-        <div class="card-grid">
-            <div class="card" style="border-left: 4px solid var(--accent); border-top: none;">
-                <p>"Лучший эндокринолог в городе. Диана Викторовна очень чуткая и грамотная."</p>
-                <strong>— Индира</strong>
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 style="font-size: 2.5rem;">Отзывы пациентов</h2>
+            <p>Реальные истории людей, которым мы помогли обрести здоровье и энергию.</p>
+        </div>
+
+        <div class="reviews-grid">
+            {% for review in site.data.reviews %}
+            <div class="review-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                <div class="review-content">
+                    <div class="review-stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="{{ review.rating }}">
+                        {% for i in (1..review.rating) %}★{% endfor %}
+                    </div>
+                    <p class="review-text" itemprop="reviewBody">"{{ review.text }}"</p>
+                </div>
+                <div class="review-footer">
+                    <span class="review-author" itemprop="author">{{ review.name }}</span>
+                    <span class="review-date" itemprop="datePublished">{{ review.date }}</span>
+                </div>
             </div>
-            </div>
+            {% endfor %}
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="https://www.instagram.com/{{ site.author.instagram }}/" target="_blank" class="cta-button" style="background: transparent; color: var(--primary); border: 2px solid var(--primary);">
+                Больше отзывов в Instagram
+            </a>
+        </div>
     </div>
 </section>
 
