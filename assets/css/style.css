@@ -725,55 +725,68 @@ section:nth-child(even) {
 
 
 :root {
-    /* Основные цвета палитры */
-    --pastel-green: #bed3bf;     /* Базовый пастельно-зеленый */
-    --primary-blue: #6ab7e4;     /* Небесно-голубой */
-    --accent-gold: #efc042;      /* Золотисто-желтый */
+    /* Основные глубокие цвета */
+    --primary-dark-green: #1a4d4d; /* Темный пастельный зеленый (для заголовков) */
+    --primary-blue: #0b57d0;       /* Насыщенный синий (для акцентов) */
     
-    /* Вариации и мягкие оттенки */
-    --bg-green-light: #f0f5f1;   /* Очень светлый зеленый для фона секций */
-    --bg-blue-light: #eef7fd;    /* Светлый голубой для карточек */
-    --border-green: #d1e0d2;     /* Цвет для рамок */
-    --text-main: #3d4a3e;        /* Темный оливково-серый для текста (мягче черного) */
+    /* Дополнительные пастельные оттенки */
+    --pastel-green: #bed3bf;       /* Мягкий зеленый (фоны карточек) */
+    --light-blue: #6ab7e4;         /* Голубой (второстепенные элементы) */
+    --accent-gold: #efc042;        /* Золотисто-желтый (кнопки записи) */
+    
+    /* Фоны и текст */
+    --bg-light: #f4f7f6;           /* Светлый серо-зеленый фон сайта */
+    --text-main: #2c3e50;          /* Цвет основного текста */
     --white: #ffffff;
 }
 
 body {
-    background-color: var(--white);
+    background-color: var(--bg-light);
     color: var(--text-main);
+    font-family: 'Source Sans 3', sans-serif;
 }
 
-/* Шапка сайта */
+/* Заголовки (Темный зеленый) */
+h1, h2, h3 {
+    color: var(--primary-dark-green);
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Шапка сайта (Белый фон + синий акцент) */
 .main-header {
     background: var(--white);
-    border-bottom: 3px solid var(--pastel-green);
+    border-bottom: 3px solid var(--primary-blue);
 }
 
-/* Секции с легкой вариацией оттенка */
-section:nth-child(even) {
-    background-color: var(--bg-green-light);
+/* Блок Блог / Instagram (Пастельный зеленый) */
+.blog-card {
+    background: var(--white);
+    border: 1px solid var(--pastel-green);
+    transition: 0.3s ease;
 }
 
-/* Кнопки (Золотисто-желтый для акцента внимания) */
+.blog-card:hover {
+    border-color: var(--light-blue);
+    box-shadow: 0 5px 15px rgba(26, 77, 77, 0.1);
+}
+
+/* Кнопки записи (Золото - самый высокий контраст) */
 .btn-appointment, .cta-button {
     background-color: var(--accent-gold) !important;
-    color: var(--white) !important;
+    color: var(--primary-dark-green) !important; /* Темный текст на золотом лучше читается */
+    font-weight: 700;
     border: none;
-    box-shadow: 0 4px 12px rgba(239, 192, 66, 0.2);
+    box-shadow: 0 4px 10px rgba(239, 192, 66, 0.3);
 }
 
 .btn-appointment:hover {
     background-color: var(--primary-blue) !important;
-    box-shadow: 0 4px 12px rgba(106, 183, 228, 0.3);
+    color: var(--white) !important;
 }
 
-/* Ссылки и иконки (Голубой) */
-a { color: var(--primary-blue); }
-.icon-box { color: var(--pastel-green); }
-
-/* Футер (Горизонтальный блок в зеленом цвете) */
+/* Горизонтальный Футер (Глубокий зеленый) */
 .footer-horizontal {
-    background-color: var(--pastel-green) !important;
-    color: var(--text-main) !important;
-    border-top: 4px solid var(--accent-gold);
+    background-color: var(--primary-dark-green) !important;
+    color: var(--pastel-green) !important;
+    border-top: 5px solid var(--accent-gold);
 }
