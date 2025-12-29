@@ -18,14 +18,14 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
     <div class="container">
         <div class="about-hero">
             <div class="about-image">
-                <img src="{{ '/assets/img/doctor.png' | relative_url }}" alt="Стафий Диана Викторовна" class="doctor-img">
-                <div class="experience-badge">
+                <img src="{{ '/assets/img/doctor.png' | relative_url }}" alt="Стафий Диана Викторовна" class="doctor-img glass-panel">
+                <div class="experience-badge glass-panel">
                     <span class="years">14+</span>
                     <span class="exp-text">лет практики</span>
                 </div>
             </div>
 
-            <div class="about-content">
+            <div class="about-content glass-panel">
                 <h2 class="section-title">Стафий Диана Викторовна</h2>
                 <p class="subtitle">Эндокринолог • Клинический нутрициолог</p>
                 
@@ -123,23 +123,23 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 </section>
 
 <section id="services" style="background: #f0f7f5;">
-    <div class="container">
+    <div class="container price-section">
         <h2 style="text-align: center;">Услуги и цены</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Эндокринолог</h3>
-                <p>Первичная консультация, осмотр, план диагностики.</p>
-                <p><b>10 000 ₸</b></p>
+        <div class="card-grid glass-panel">
+            <div class="card price-item">
+                <span><span><h3>Эндокринолог</h3></span>
+                <span><p>Первичная консультация, осмотр, план диагностики.</p></span>
+                <span class="price-val"><p><b>10 000 ₸</b></p></span>
             </div>
-            <div class="card">
-                <h3>Нутрициолог</h3>
-                <p>Разбор рациона, восполнение дефицитов витаминов.</p>
-                <p><b>15 000 ₸</b></p>
+            <div class="card price-item">
+                <h3>Нутрициолог</h3></span>
+                <p>Разбор рациона, восполнение дефицитов витаминов.</p></span>
+                <span class="price-val"><p><b>15 000 ₸</b></p></span>
             </div>
-            <div class="card">
-                <h3>Повторный прием</h3>
-                <p>Коррекция терапии по результатам анализов.</p>
-                <p><b>7 000 ₸</b></p>
+            <div class="card price-item">
+                <span><h3>Повторный прием</h3></span>
+               <span> <p>Коррекция терапии по результатам анализов.</p></span>
+                <span class="price-val"><p><b>7 000 ₸</b></p></span>
             </div>
         </div>
     </div>
