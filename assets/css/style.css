@@ -446,3 +446,177 @@ nav { display: flex; justify-content: space-between; align-items: center; height
         justify-content: center;
     }
 }
+
+
+
+
+
+
+/* New Colors */
+
+:root {
+    /* Новая пастельная палитра */
+    --primary-blue: #6ab7e4;       /* Основной голубой */
+    --accent-gold: #efc042;        /* Золотисто-желтый */
+    --pastel-green: #d4edda;       /* Мягкий пастельный зеленый */
+    --bg-light: #f4f9fc;           /* Очень светлый голубой фон */
+    --text-dark: #2c3e50;          /* Глубокий синий для текста */
+    
+    /* Шрифты */
+    --font-heading: 'Libre Baskerville', serif;
+    --font-body: 'Source Sans 3', sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #ffffff 0%, var(--bg-light) 100%);
+    color: var(--text-dark);
+}
+
+/* Обновление заголовков */
+h1, h2, h3 {
+    color: var(--primary-blue);
+}
+
+/* Кнопка записи (Золотистая) */
+.btn-appointment, .cta-button {
+    background-color: var(--accent-gold) !important;
+    color: #fff !important;
+    border: none;
+    box-shadow: 0 4px 15px rgba(239, 192, 66, 0.3);
+}
+
+.btn-appointment:hover, .cta-button:hover {
+    background-color: var(--primary-blue) !important;
+    transform: translateY(-2px);
+}
+
+/* Карточки услуг и отзывов (Зеленый акцент) */
+.card, .review-card {
+    border-top: 5px solid var(--pastel-green) !important;
+    background: #ffffff;
+}
+
+/* Бейджи и иконки (Голубой) */
+.badge-online {
+    background: var(--primary-blue);
+    color: white;
+}
+
+/* Горизонтальный футер (теперь в основном голубом) */
+.footer-horizontal {
+    background-color: var(--primary-blue) !important;
+    border-top: 4px solid var(--accent-gold) !important;
+}
+
+.blog-card .category {
+    color: var(--primary-blue);
+    background: var(--pastel-green);
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.blog-card:hover {
+    border-color: var(--accent-gold);
+}
+
+.main-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--pastel-green);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+.btn-nav {
+    background: var(--accent-gold);
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+/* Стили кнопки Гамбургера */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-blue);
+    transition: 0.3s;
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ (Адаптив) */
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: flex; /* Показываем кнопку на планшетах/телефонах */
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-bottom: 2px solid var(--primary-blue);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-menu.active {
+        max-height: 400px; /* Высота раскрытого меню */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+}
