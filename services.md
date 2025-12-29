@@ -3,6 +3,24 @@ layout: default
 title: Услуги и стоимость
 ---
 
+<section class="how-to">
+  <h2>Как проходит приём</h2>
+  <div itemscope itemtype="https://schema.org/HowTo">
+    <div itemprop="step">
+      <h3>1. Сбор анамнеза</h3>
+      <p>Обсуждаем ваши жалобы и историю болезни.</p>
+    </div>
+    <div itemprop="step">
+      <h3>2. Осмотр и замеры</h3>
+      <p>Проверка физических показателей.</p>
+    </div>
+    <div itemprop="step">
+      <h3>3. Назначения</h3>
+      <p>Составление плана обследования или лечения.</p>
+    </div>
+  </div>
+</section>
+
 <section style="padding: 40px 10%;">
   <h1 style="text-align: center;">Услуги эндокринолога-нутрициолога</h1>
   <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
