@@ -84,6 +84,35 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
     </div>
 </section>
 
+<section id="blog" class="blog-section">
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
+            <div>
+                <h2 style="font-size: 2.8rem; margin: 0;">Блог эксперта</h2>
+                <p style="margin-top: 10px; color: #667e7e;">Актуальные темы эндокринологии и нутрициологии из моего Instagram</p>
+            </div>
+            <a href="{{ site.author.instagram_url }}" target="_blank" class="cta-button" style="background: transparent; border: 2px solid var(--accent-mint); color: var(--primary-dark);">
+                Все публикации
+            </a>
+        </div>
+
+        <div class="blog-grid">
+            {% for post in site.data.insta_feed limit:3 %}
+            <a href="{{ post.link }}" target="_blank" class="blog-card">
+                <div>
+                    <div class="category">{{ post.category }}</div>
+                    <h3>{{ post.title }}</h3>
+                </div>
+                <div class="blog-link">
+                    Смотреть в Instagram 
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
 <section id="booking" style="background: linear-gradient(180deg, #f0f7f5 0%, #ffffff 100%); padding: 100px 0;">
     <div class="container">
         <div style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">
