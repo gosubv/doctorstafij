@@ -51,6 +51,68 @@ nav { display: flex; justify-content: space-between; align-items: center; height
     border-radius: 5px;
 }
 
+.main-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--accent-light);
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--primary-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-mint);
+}
+
+.btn-appointment {
+    background: var(--primary-dark);
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.btn-appointment:hover {
+    background: var(--accent-mint);
+    transform: translateY(-2px);
+}
+
+/* Мобильное меню */
+@media (max-width: 768px) {
+    .nav-menu { display: none; } /* Здесь можно добавить "гамбургер" */
+}
+
+
 .hero { 
     text-align: center; 
     padding: 150px 0; 
