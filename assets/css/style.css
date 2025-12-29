@@ -1,140 +1,89 @@
 :root {
-    /* Цветовая палитра */
-    --primary-dark: #1a4d4d;      /* Глубокий сине-зеленый */
-    --accent-mint: #7fc8b4;       /* Мятный / Бирюзовый */
-    --accent-light: #e0f2f1;      /* Светлая мята для ховеров */
-    --bg-light: #f8faf9;          /* Светлый фон */
-    --text-main: #334e4e;         /* Темный текст с оттенком хвои */
-    
-    /* Типографика */
+    --primary: #1a4d4d;      /* Глубокий сине-зеленый */
+    --accent: #7fc8b4;       /* Мятный */
+    --bg-light: #f8faf9;
     --font-heading: 'Libre Baskerville', serif;
     --font-body: 'Source Sans 3', sans-serif;
 }
 
+html { scroll-behavior: smooth; } /* Плавный скролл одной строкой */
+
 body {
     font-family: var(--font-body);
-    color: var(--text-main);
     margin: 0;
-    /* Светлый фон с мягким медицинским градиентом */
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebf5f3 100%);
-    line-height: 1.7;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7f5 100%);
+    color: #334e4e;
 }
 
-h1, h2, h3, .logo {
-    font-family: var(--font-heading);
-    color: var(--primary-dark);
-    font-weight: 700;
+/* Эффект анимации появления */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+    padding: 100px 0;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 25px; }
 
-/* Шапка сайта */
 header {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 2px solid var(--accent-light);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: sticky; top: 0; z-index: 1000;
+    border-bottom: 1px solid rgba(127, 200, 180, 0.3);
 }
 
 nav { display: flex; justify-content: space-between; align-items: center; height: 80px; }
-.nav-links { list-style: none; display: flex; gap: 30px; align-items: center; }
-.nav-links a { text-decoration: none; color: var(--primary-dark); font-weight: 600; font-size: 0.95rem; }
+.nav-links { list-style: none; display: flex; gap: 25px; align-items: center; margin: 0; }
+.nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; }
 
-/* Кнопка записи в меню */
 .btn-nav {
-    background: var(--primary-dark);
+    background: var(--primary);
     color: white !important;
-    padding: 10px 22px;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-.btn-nav:hover { background: var(--accent-mint); }
-
-/* Hero секция */
-.hero {
-    padding: 100px 0;
-    text-align: center;
-    background-image: radial-gradient(var(--accent-light) 1px, transparent 1px);
-    background-size: 30px 30px; /* Деликатный медицинский паттерн (точки) */
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-.hero h1 { font-size: 3rem; margin-bottom: 10px; }
-
-.cta-button {
-    background: var(--accent-mint);
-    color: white;
-    padding: 18px 35px;
-    font-family: var(--font-body);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-decoration: none;
-    border-radius: 50px;
-    display: inline-block;
-    box-shadow: 0 4px 15px rgba(127, 200, 180, 0.4);
-    transition: 0.3s ease;
+.hero { 
+    text-align: center; 
+    padding: 150px 0; 
+    background: radial-gradient(circle, #e0f2f1 0%, transparent 70%);
 }
 
-.cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(127, 200, 180, 0.6);
-    background: var(--primary-dark);
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
-/* Микро-бейдж */
-.badge-online {
-    display: inline-flex;
-    align-items: center;
-    background: #e0f2f1;
-    color: var(--primary-dark);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border: 1px solid var(--accent-mint);
-    margin-bottom: 20px;
-}
-.badge-online::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    background: #4caf50;
-    border-radius: 50%;
-    margin-right: 8px;
-    box-shadow: 0 0 5px #4caf50;
-}
-
-/* Карточки услуг */
 .card {
     background: white;
-    border-left: 4px solid var(--accent-mint);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-    transition: 0.3s;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(26, 77, 77, 0.05);
+    border-top: 4px solid var(--accent);
 }
-.card:hover { transform: translateY(-5px); border-left-color: var(--primary-dark); }
 
-/* Лайтбокс дипломов (CSS only) */
-.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
-.gallery img { 
-    width: 100%; 
-    height: 200px; 
-    object-fit: cover; 
-    border-radius: 5px; 
-    cursor: zoom-in;
-    border: 1px solid var(--accent-light);
+.badge-online {
+    background: var(--accent);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
-.gallery img:focus {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80vw;
-    height: 80vh;
-    object-fit: contain;
-    z-index: 2000;
-    outline: 500px solid rgba(26, 77, 77, 0.9);
+
+.gallery { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 20px; }
+.gallery img { height: 200px; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+.gallery img:hover { transform: scale(1.05); }
+
+/* Хак для лайтбокса без JS */
+.gallery img:active {
+    position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(3);
+    z-index: 2000; outline: 1000px solid rgba(0,0,0,0.8);
 }
