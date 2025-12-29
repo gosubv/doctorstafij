@@ -18,3 +18,8 @@ navigation:
 
 markdown: kramdown
 theme: minima # Или оставить пустым при кастомной верстке
+
+author:
+  name: "Стафий Диана Викторовна"
+  instagram_url: "https://www.instagram.com/dianastafiy/"
+  instagram_handle: "@dianastafiy"
