@@ -37,7 +37,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
                 
                 <a href="#booking" class="cta-button">Записаться на консультацию</a>
             </div>
-        </мdiv>
+        </div>
 
         <section id="specializations" class="spec-section">
     <div class="container">
