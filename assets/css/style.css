@@ -802,3 +802,67 @@ section:nth-child(even) {
     opacity: 1;
     color: var(--pastel-blue-bg);
 }
+
+.about-hero {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.about-image {
+    position: relative;
+    flex: 0 0 400px; /* Фиксированная ширина для фото */
+}
+
+.doctor-img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 20px 20px 0px var(--pastel-green); /* Декоративная подложка */
+    object-fit: cover;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--accent-gold);
+    color: var(--primary-dark-green);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.experience-badge .years {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.experience-badge .exp-text {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-content .subtitle {
+    font-size: 1.2rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 992px) {
+    .about-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .about-image {
+        flex: 0 0 auto;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
