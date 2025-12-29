@@ -2146,3 +2146,29 @@ body {
     transform: translateY(-2px);
     filter: brightness(1.1);
 }
+
+
+
+
+
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+    border-bottom: 1px solid rgba(26, 77, 77, 0.05);
+}
+
+.price-item:last-child { border-bottom: none; }
+
+.price-val {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary);
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 40px;
+}
