@@ -1,26 +1,18 @@
-title: Доктор Стафий
+title: Доктор Стафий | Эндокринолог-нутрициолог в Петропавловске
 email: doctor.stafij@gmail.com
-description: Эндокринолог-нутрициолог Стафий Диана Викторовна. Специалист по коррекции гормонального фона и питания.
-baseurl: "doctorstafij/" 
-url: "https://gosubv.github.io/doctorstafij/"
+description: "Прием эндокринолога и нутрициолога Стафий Дианы Викторовны. Консультации по гормональному здоровью и питанию в Петропавловске и онлайн."
+baseurl: "/doctorstafij"
+url: "https://gosubv.github.io"
+
+author:
+  name: "Стафий Диана Викторовна"
+  instagram: "dianastafiy"
+  address: "г. Петропавловск, ул. Ауэзова 133"
 
 # Навигация
 navigation:
-  - title: Главная
-    url: /
-  - title: О враче
-    url: /about/
-  - title: Услуги
-    url: /services/
-  - title: Сертификаты
-    url: /certificates/
-  - title: Отзывы
-    url: /reviews/
-  - title: Записаться
-    url: /booking/
-    highlight: true
-
-instagram_username: dianastafiy
-instagram_url: "https://www.instagram.com/dianastafiy/"
-
-remote_theme: "jekyll/minima@1e8a445"
+  - { title: "Главная", link: "/" }
+  - { title: "О враче", link: "/about/" }
+  - { title: "Услуги", link: "/#services" }
+  - { title: "Отзывы", link: "/#reviews" }
+  - { title: "Записаться", link: "/booking/", class: "btn-nav" }
