@@ -620,3 +620,80 @@ h1, h2, h3 {
         text-align: center;
     }
 }
+
+:root {
+    /* Основная палитра */
+    --primary-blue: #6ab7e4;    /* Небесно-голубой */
+    --accent-gold: #efc042;     /* Золотисто-желтый */
+    --pastel-green: #d4edda;    /* Мягкий травяной */
+    
+    /* Дополнительные оттенки */
+    --bg-light: #f7fbfe;        /* Светлый фон */
+    --text-main: #34495e;       /* Темно-серый для чтения */
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+/* Настройка заголовков */
+h1, h2, h3 {
+    font-family: 'Libre Baskerville', serif;
+    color: var(--primary-blue);
+}
+
+/* Кнопки и призывы к действию (Золото) */
+.btn-nav, .cta-button, .btn-appointment {
+    background-color: var(--accent-gold) !important;
+    color: var(--white) !important;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(239, 192, 66, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover, .cta-button:hover {
+    background-color: var(--primary-blue) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(106, 183, 228, 0.4);
+}
+
+/* Секции с пастельным зеленым фоном */
+section:nth-child(even) {
+    background-color: rgba(212, 237, 218, 0.4); /* Очень прозрачный зеленый */
+}
+
+/* Карточки отзывов и блога */
+.review-card, .blog-card {
+    background: var(--white);
+    border: 1px solid var(--pastel-green);
+    border-bottom: 4px solid var(--primary-blue); /* Акцент снизу */
+}
+
+/* Карусель дипломов */
+.diploma-card {
+    border: 2px solid var(--pastel-green);
+}
+
+/* Шапка сайта */
+.main-header {
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+/* Горизонтальный футер */
+.footer-horizontal {
+    background-color: var(--primary-blue) !important;
+    border-top: 5px solid var(--accent-gold) !important;
+    color: var(--white) !important;
+}
+
+.footer-links a {
+    color: var(--white) !important;
+}
+
+.footer-links a:hover {
+    color: var(--pastel-green) !important;
+}
