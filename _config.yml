@@ -17,4 +17,4 @@ navigation:
   - { title: "Запись", link: "/booking/" }
 
 markdown: kramdown
-# theme: minima # Или оставить пустым при кастомной верстке
+theme: minima # Или оставить пустым при кастомной верстке
