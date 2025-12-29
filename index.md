@@ -23,7 +23,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
                 <p>Специализируюсь на лечении патологий щитовидной железы, сахарного диабета, ожирения и коррекции дефицитных состояний.</p>
             </div>
             <div style="flex: 1; min-width: 300px; background: var(--accent); height: 500px; border-radius: 20px; overflow: hidden;">
-                 <img src="./images/doctor.png" alt="Диана Викторовна" style="width:100%; height:100%; object-fit: cover;">
+                 <img src="./images/doctor.png" alt="Диана Викторовна" style="height:500px; object-fit: cover;">
             </div>
         </div>
     </div>
