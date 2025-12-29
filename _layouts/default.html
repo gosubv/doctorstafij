@@ -30,12 +30,37 @@
 
     <main>{{ content }}</main>
 
-    <footer class="container">
-        <div style="text-align: center; padding: 40px 0;">
-            <p>&copy; 2025 Доктор Стафий Диана Викторовна. г. Петропавловск, ул. Ауэзова 133</p>
-            <a href="https://instagram.com/dianastafiy" target="_blank" class="insta-link">Instagram @dianastafiy</a>
+    <footer style="background-color: var(--primary-dark); color: white; padding: 60px 0 30px 0; margin-top: 80px;">
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+        
+        <div style="flex: 1; min-width: 250px;">
+            <h3 style="color: var(--accent-mint); font-family: var(--font-heading);">Доктор Стафий</h3>
+            <p>г. Петропавловск, ул. Ауэзова 133</p>
+            <p>Email: <a href="mailto:{{ site.email }}" style="color: white;">{{ site.email }}</a></p>
         </div>
-    </footer>
+
+        <div style="flex: 1; min-width: 250px;">
+            <h4 style="font-family: var(--font-heading);">Присоединяйтесь</h4>
+            <p>Полезная информация о гормонах и питании в моем блоге:</p>
+            <a href="{{ site.author.instagram_url }}" target="_blank" class="cta-button" style="padding: 10px 20px; font-size: 0.9rem; background: var(--accent-mint);">
+                Подписаться на Instagram
+            </a>
+        </div>
+
+        <div style="flex: 1; min-width: 200px;">
+            <h4 style="font-family: var(--font-heading);">Навигация</h4>
+            <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li><a href="#about" style="color: #e0f2f1; text-decoration: none;">О враче</a></li>
+                <li><a href="#services" style="color: #e0f2f1; text-decoration: none;">Услуги</a></li>
+                <li><a href="#booking" style="color: #e0f2f1; text-decoration: none;">Записаться онлайн</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container" style="text-align: center; margin-top: 50px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; color: #a8dadc;">
+        <p>&copy; 2025 Доктор Стафий Диана Викторовна. Все права защищены. Разработка на Jekyll.</p>
+    </div>
+</footer>
 
     <script>
         // Анимация появления блоков при скролле
