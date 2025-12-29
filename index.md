@@ -1,63 +1,87 @@
 ---
 layout: default
-title: Доктор Стафий | Эндокринолог и нутрициолог
+title: Доктор Стафий | Эндокринолог-нутрициолог
 ---
 
-<section class="hero">
+<section id="hero" class="hero">
     <div class="container">
-        <div class="badge-online">Доступна онлайн-консультация</div>
-        <h1>Доктор Стафий</h1>
-        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px;">
-            Системный подход к здоровью: эндокринология, диетология и функциональная нутрициология в Петропавловске.
+        <span class="badge-online">Приём онлайн</span>
+        <h1 style="font-size: 3.5rem; margin: 20px 0;">Доктор Стафий</h1>
+        <p style="font-size: 1.4rem; color: var(--primary); margin-bottom: 40px;">
+            Стафий Диана Викторовна — Ваш эксперт в мире гормонального здоровья и осознанного питания.
         </p>
-        <a href="{{ site.baseurl }}/booking/" class="cta-button">Записаться на прием</a>
+        <a href="#booking" class="btn-nav" style="padding: 20px 40px; font-size: 1.1rem; text-decoration: none;">Записаться онлайн</a>
     </div>
 </section>
 
-<section id="services" style="padding: 60px 0;">
+<section id="about">
     <div class="container">
-        <h2 style="text-align: center; margin-bottom: 40px;">Виды приемов</h2>
-        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        <div style="display: flex; gap: 50px; flex-wrap: wrap; align-items: center;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 2.5rem;">О враче</h2>
+                <p><b>Стафий Диана Викторовна</b> — врач-эндокринолог первой категории, нутрициолог. Стаж работы более 12 лет.</p>
+                <p>Специализируюсь на лечении патологий щитовидной железы, сахарного диабета, ожирения и коррекции дефицитных состояний.</p>
+                <h3>Сертификаты</h3>
+                <div class="gallery">
+                    <img src="https://newlifediagn.kz/images/diploma1.jpg" alt="Диплом">
+                    <img src="https://newlifediagn.kz/images/diploma2.jpg" alt="Сертификат">
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 300px; background: var(--accent); height: 500px; border-radius: 20px; overflow: hidden;">
+                 <img src="https://newlifediagn.kz/images/doctors/stafij.jpg" alt="Диана Викторовна" style="width:100%; height:100%; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" style="background: #f0f7f5;">
+    <div class="container">
+        <h2 style="text-align: center;">Услуги и цены</h2>
+        <div class="card-grid">
             <div class="card">
-                <h3>Первичный прием эндокринолога</h3>
-                <p>Полный разбор жалоб, осмотр, интерпретация анализов и постановка диагноза.</p>
-                <strong>Цена: от 10 000 ₸</strong>
+                <h3>Эндокринолог</h3>
+                <p>Первичная консультация, осмотр, план диагностики.</p>
+                <p><b>10 000 ₸</b></p>
             </div>
             <div class="card">
-                <h3>Консультация нутрициолога</h3>
-                <p>Разбор дефицитов, коррекция рациона, подбор нутрицевтической поддержки.</p>
-                <strong>Цена: от 12 000 ₸</strong>
+                <h3>Нутрициолог</h3>
+                <p>Разбор рациона, восполнение дефицитов витаминов.</p>
+                <p><b>15 000 ₸</b></p>
             </div>
             <div class="card">
                 <h3>Повторный прием</h3>
-                <p>Контроль динамики лечения и коррекция терапии.</p>
-                <strong>Цена: от 7 000 ₸</strong>
+                <p>Коррекция терапии по результатам анализов.</p>
+                <p><b>7 000 ₸</b></p>
             </div>
+        </div>
+    </div>
+</section>
+
+<section id="booking">
+    <div class="container">
+        <h2 style="text-align: center;">Запись на прием</h2>
+        <div style="max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2i5tRlXYaJ8xwBVwlNWhMC_qlRVYVaD38cEBtIHm9Y6tfuqlr7fghSu_O610_o7RjaenYaAW40?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
         </div>
     </div>
 </section>
 
 <section id="reviews">
-        <h2>Отзывы пациентов</h2>
-        <div class="grid">
-            {% for i in (1..6) %}
-            <div class="card" itemprop="review" itemscope itemtype="https://schema.org/Review">
-                <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                    <meta itemprop="ratingValue" content="5">⭐⭐⭐⭐⭐
-                </div>
-                <p itemprop="reviewBody">Благодарю Диану Викторовну за профессионализм. Очень грамотный подход к лечению!</p>
-                <strong itemprop="author">Пациент {{ i }}</strong>
-            </div>
-            {% endfor %}
-        </div>
-    </section>
-
-<section id="map" style="padding: 60px 0;">
     <div class="container">
-        <h2>Контакты и проезд</h2>
-        <p>г. Петропавловск, ул. Ауэзова 133, Магия Рук</p>
-        <div style="border-radius: 15px; overflow: hidden; border: 2px solid var(--accent-light);">
-            <iframe src="https://yandex.ru/map-widget/v1/?ll=69.1389,54.8631&z=16&text=Петропавловск,Ауэзова,133" width="100%" height="450" frameborder="0"></iframe>
-        </div>
+        <h2>Отзывы</h2>
+        <div class="card-grid">
+            <div class="card" style="border-left: 4px solid var(--accent); border-top: none;">
+                <p>"Лучший эндокринолог в городе. Диана Викторовна очень чуткая и грамотная."</p>
+                <strong>— Индира</strong>
+            </div>
+            </div>
+    </div>
+</section>
+
+<section id="map">
+    <div class="container">
+        <h2>Где я принимаю</h2>
+        <p>г. Петропавловск, ул. Ауэзова 133</p>
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=69.1389,54.8631&z=16&text=Петропавловск,Ауэзова,133" width="100%" height="400" frameborder="0" style="border-radius: 15px;"></iframe>
     </div>
 </section>
