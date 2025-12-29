@@ -1950,3 +1950,114 @@ body {
     box-shadow: 15px 15px 0 var(--primary);
     filter: saturate(1.1);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1. ПЕРЕМЕННЫЕ И ЦВЕТА */
+:root {
+    --primary: #1a4d4d;          /* Ваш глубокий зеленый */
+    --accent: #0b57d0;           /* iOS Blue */
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --radius: 14px;              /* "Квадратный" iOS стиль */
+    --blur: blur(20px);
+}
+
+/* 2. ЖИВОЙ ФОН (LIQUID EFFECT) */
+body {
+    background: #f0f4f3;
+    font-family: 'Source Sans 3', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Добавьте этот блок в HTML сразу после <body> */
+.liquid-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, #f0f4f3 0%, #e8f0f0 100%);
+}
+
+.blob {
+    position: absolute;
+    width: 50vw; height: 50vw;
+    background: var(--primary);
+    filter: blur(120px);
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: move 25s infinite alternate ease-in-out;
+}
+
+@keyframes move {
+    from { transform: translate(-10%, -10%); }
+    to { transform: translate(30%, 20%); }
+}
+
+/* 3. ШАПКА И МЕНЮ (GLASS) */
+.main-header {
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky; top: 0; z-index: 1000;
+}
+
+.nav-links a {
+    color: var(--primary);
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px; /* Квадратное выделение */
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(11, 87, 208, 0.1);
+    color: var(--accent);
+}
+
+/* 4. ИНТЕРАКТИВНЫЕ КАРТОЧКИ УСЛУГ */
+.spec-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.spec-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.8);
+    border-color: var(--accent);
+    box-shadow: 0 15px 40px rgba(11, 87, 208, 0.1);
+}
+
+/* 5. КНОПКИ (iOS STYLE) */
+.btn-appointment {
+    background: var(--accent) !important;
+    color: white !important;
+    border-radius: var(--radius) !important;
+    padding: 12px 28px;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 15px rgba(11, 87, 208, 0.3);
+    transition: 0.3s;
+}
+
+.btn-appointment:hover {
+    filter: brightness(1.1);
+    transform: scale(1.03);
+}
