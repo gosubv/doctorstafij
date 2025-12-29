@@ -87,3 +87,53 @@ nav { display: flex; justify-content: space-between; align-items: center; height
     position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(3);
     z-index: 2000; outline: 1000px solid rgba(0,0,0,0.8);
 }
+
+/* Блок отзывов */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.review-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(26, 77, 77, 0.05);
+    border: 1px solid var(--accent-light);
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
+
+.review-stars {
+    color: #f1c40f;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-style: italic;
+    color: #4a6363;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.review-author {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: #99aaaa;
+}
