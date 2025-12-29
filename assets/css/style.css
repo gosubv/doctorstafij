@@ -137,3 +137,13 @@ nav { display: flex; justify-content: space-between; align-items: center; height
     font-size: 0.8rem;
     color: #99aaaa;
 }
+
+@media (max-width: 768px) {
+    .booking-container iframe {
+        height: 500px; /* Уменьшаем высоту для мобильных экранов */
+    }
+    
+    #booking {
+        padding: 60px 0;
+    }
+}
