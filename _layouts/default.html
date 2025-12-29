@@ -47,6 +47,30 @@
             </a>
         </div>
 
+        <div style="padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+        <h3 style="font-family: var(--font-heading); color: #fff; margin: 0;">Последнее в Instagram</h3>
+        <a href="{{ site.author.instagram_url }}" target="_blank" style="color: var(--accent-mint); text-decoration: none; font-weight: 600;">
+            Перейти в профиль @dianastafiy →
+        </a>
+    </div>
+
+    <div class="insta-dynamic-feed">
+        {% for post in site.data.insta_feed limit:3 %}
+        <a href="{{ post.link }}" target="_blank" class="insta-post-card">
+            <div>
+                <div class="insta-category">{{ post.category }}</div>
+                <h4 class="insta-title">{{ post.title }}</h4>
+            </div>
+            <div class="insta-arrow">
+                Читать пост 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
         <div style="flex: 1; min-width: 200px;">
             <h4 style="font-family: var(--font-heading);">Навигация</h4>
             <ul style="list-style: none; padding: 0; line-height: 2;">
