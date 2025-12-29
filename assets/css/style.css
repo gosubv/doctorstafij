@@ -697,3 +697,26 @@ section:nth-child(even) {
 .footer-links a:hover {
     color: var(--pastel-green) !important;
 }
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-logo {
+    height: 50px; /* Оптимальная высота для шапки */
+    width: auto;  /* Сохраняем пропорции */
+    transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.05); /* Легкий эффект при наведении */
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .header-logo {
+        height: 40px; /* Чуть меньше на смартфонах */
+    }
+}
