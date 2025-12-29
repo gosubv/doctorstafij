@@ -31,45 +31,40 @@
 
     <main>{{ content }}</main>
 
-    <footer style="background-color: var(--primary-dark); color: white; padding: 60px 0 30px 0; margin-top: 80px;">
-    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
-        
-        <div style="flex: 1; min-width: 250px;">
-            <h3 style="color: var(--accent-mint); font-family: var(--font-heading);">Доктор Стафий</h3>
-            <p>г. Петропавловск, ул. Ауэзова 133</p>
-            <p>Email: <a href="mailto:{{ site.email }}" style="color: white;">{{ site.email }}</a></p>
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="footer-column">
+                <h3 class="footer-logo">Доктор Стафий</h3>
+                <p>Стафий Диана Викторовна<br>Эндокринолог, нутрициолог</p>
+                <div class="footer-social">
+                    <a href="{{ site.author.instagram_url }}" target="_blank" class="insta-badge">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        @dianastafiy
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Прием в Петропавловске</h4>
+                <p>ул. Ауэзова 133<br>
+                <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Навигация</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">О враче</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#blog">Блог</a></li>
+                    <li><a href="#booking">Записаться</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div style="flex: 1; min-width: 250px;">
-            <h4 style="font-family: var(--font-heading);">Присоединяйтесь</h4>
-            <p>Полезная информация о гормонах и питании в моем блоге:</p>
-            <a href="{{ site.author.instagram_url }}" target="_blank" class="cta-button" style="padding: 10px 20px; font-size: 0.9rem; background: var(--accent-mint);">
-                Подписаться на Instagram
-            </a>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Доктор Стафий. Все права защищены. <br>Сайт не является публичной офертой. Требуется консультация специалиста.</p>
         </div>
-
-        <div style="padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.1);">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
-        <h3 style="font-family: var(--font-heading); color: #fff; margin: 0;">Последнее в Instagram</h3>
-        <a href="{{ site.author.instagram_url }}" target="_blank" style="color: var(--accent-mint); text-decoration: none; font-weight: 600;">
-            Перейти в профиль @dianastafiy →
-        </a>
-    </div>
-            
-</div>
-
-        <div style="flex: 1; min-width: 200px;">
-            <h4 style="font-family: var(--font-heading);">Навигация</h4>
-            <ul style="list-style: none; padding: 0; line-height: 2;">
-                <li><a href="#about" style="color: #e0f2f1; text-decoration: none;">О враче</a></li>
-                <li><a href="#services" style="color: #e0f2f1; text-decoration: none;">Услуги</a></li>
-                <li><a href="#booking" style="color: #e0f2f1; text-decoration: none;">Записаться онлайн</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="container" style="text-align: center; margin-top: 50px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; color: #a8dadc;">
-        <p>&copy; 2025 Доктор Стафий Диана Викторовна. Все права защищены. Разработка на Jekyll.</p>
     </div>
 </footer>
 
