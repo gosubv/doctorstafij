@@ -123,22 +123,22 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 </section>
 
 <section id="services" style="background: #f0f7f5;">
-    <div class="price-section">
+    <div class="container price-section">
         <h2 style="text-align: center;">Услуги и цены</h2>
-        <div class="glass-panel">
-            <div class="price-item">
+        <div class="card-grid glass-panel">
+            <div class="card price-item">
                 <span><span><h3>Эндокринолог</h3></span>
                 <span><p>Первичная консультация, осмотр, план диагностики.</p></span>
                 <span class="price-val"><p><b>10 000 ₸</b></p></span>
             </div>
-            <div class="price-item">
-                <h3>Нутрициолог</h3></span>
-                <p>Разбор рациона, восполнение дефицитов витаминов.</p></span>
+            <div class="card price-item">
+                <span><h3>Нутрициолог</h3></span>
+                <span><p>Разбор рациона, восполнение дефицитов витаминов.</p></span>
                 <span class="price-val"><p><b>15 000 ₸</b></p></span>
             </div>
-            <div class="price-item">
+            <div class="card price-item">
                 <span><h3>Повторный прием</h3></span>
-               <span> <p>Коррекция терапии по результатам анализов.</p></span>
+                <span> <p>Коррекция терапии по результатам анализов.</p></span>
                 <span class="price-val"><p><b>7 000 ₸</b></p></span>
             </div>
         </div>
