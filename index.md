@@ -57,11 +57,34 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
     </div>
 </section>
 
-<section id="booking">
+<section id="booking" style="background: linear-gradient(180deg, #f0f7f5 0%, #ffffff 100%); padding: 100px 0;">
     <div class="container">
-        <h2 style="text-align: center;">Запись на прием</h2>
-        <div style="max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2i5tRlXYaJ8xwBVwlNWhMC_qlRVYVaD38cEBtIHm9Y6tfuqlr7fghSu_O610_o7RjaenYaAW40?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Запись на консультацию</h2>
+            <p style="font-size: 1.1rem; color: #4a6363;">
+                Выберите удобный тип приема и время в календаре ниже. После успешной записи вы получите подтверждение на указанную электронную почту.
+            </p>
+        </div>
+
+        <div class="booking-container" style="background: white; border-radius: 20px; box-shadow: 0 15px 45px rgba(26, 77, 77, 0.08); overflow: hidden; border: 1px solid var(--accent-light);">
+            <div style="background: var(--primary-dark); color: white; padding: 15px 30px; font-size: 0.9rem; display: flex; align-items: center; gap: 10px;">
+                <span style="background: var(--accent-mint); width: 8px; height: 8px; border-radius: 50%;"></span>
+                Выберите дату и доступный временной слот:
+            </div>
+
+            <iframe 
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2i5tRlXYaJ8xwBVwlNWhMC_qlRVYVaD38cEBtIHm9Y6tfuqlr7fghSu_O610_o7RjaenYaAW40?gv=true" 
+                style="border: 0" 
+                width="100%" 
+                height="700" 
+                frameborder="0">
+            </iframe>
+            </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <p style="font-size: 0.9rem; color: #99aaaa;">
+                Если у вас возникли вопросы по записи, вы можете написать на <a href="mailto:{{ site.email }}" style="color: var(--primary-dark); font-weight: 600;">{{ site.email }}</a>
+            </p>
         </div>
     </div>
 </section>
