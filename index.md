@@ -89,34 +89,45 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
     </div>
 </section>
 
-<section id="reviews" style="background: var(--bg-light);">
+<section id="reviews" style="background-color: #fbfdfd;">
     <div class="container">
-        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-            <h2 style="font-size: 2.5rem;">Отзывы пациентов</h2>
-            <p>Реальные истории людей, которым мы помогли обрести здоровье и энергию.</p>
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="font-size: 2.8rem;">Отзывы пациентов</h2>
+            <div style="width: 60px; height: 3px; background: var(--accent-mint); margin: 20px auto;"></div>
         </div>
 
         <div class="reviews-grid">
-            {% for review in site.data.reviews %}
-            <div class="review-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
-                <div class="review-content">
-                    <div class="review-stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                        <meta itemprop="ratingValue" content="{{ review.rating }}">
-                        {% for i in (1..review.rating) %}★{% endfor %}
-                    </div>
-                    <p class="review-text" itemprop="reviewBody">"{{ review.text }}"</p>
+            {% for review in site.data.reviews limit:6 %}
+            <div class="review-card" itemscope itemtype="https://schema.org/Review">
+                <div class="review-stars">
+                    {% for i in (1..5) %}★{% endfor %}
                 </div>
-                <div class="review-footer">
-                    <span class="review-author" itemprop="author">{{ review.name }}</span>
-                    <span class="review-date" itemprop="datePublished">{{ review.date }}</span>
+                
+                <div class="review-text" itemprop="reviewBody">
+                    {{ review.text }}
+                </div>
+
+                <div class="review-info">
+                    <div style="width: 45px; height: 45px; background: var(--accent-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-dark); font-weight: bold;">
+                        {{ review.name | slice: 0 }}
+                    </div>
+                    <div>
+                        <span class="author-name" itemprop="author">{{ review.name }}</span>
+                        <div style="font-size: 0.85rem; color: #99aaaa;">Пациент клиники</div>
+                    </div>
+                </div>
+
+                <meta itemprop="datePublished" content="{{ review.date }}">
+                <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" style="display:none;">
+                    <meta itemprop="ratingValue" content="5">
                 </div>
             </div>
             {% endfor %}
         </div>
-        
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="https://www.instagram.com/{{ site.author.instagram }}/" target="_blank" class="cta-button" style="background: transparent; color: var(--primary); border: 2px solid var(--primary);">
-                Больше отзывов в Instagram
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="https://www.instagram.com/{{ site.author.instagram }}/" target="_blank" class="cta-button" style="background: white; color: var(--primary-dark); border: 2px solid var(--accent-mint);">
+                Читать все отзывы в Instagram
             </a>
         </div>
     </div>
