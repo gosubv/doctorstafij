@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav-container">
-      <a class="site-title" href="/">{{ site.title }}</a>
-      <div class="nav-links">
-        {% for link in site.navigation %}
-          <a href="{{ link.url | relative_url }}" class="{% if link.highlight %}btn-nav{% endif %}">
-            {{ link.title }}
-          </a>
-        {% endfor %}
-      </div>
-    </nav>
-  </header>
+    <header>
+        <nav class="container">
+            <a href="{{ site.baseurl }}/" class="logo">Доктор Стафий</a>
+            <ul class="nav-links">
+                {% for item in site.navigation %}
+                <li><a href="{{ item.link | relative_url }}">{{ item.title }}</a></li>
+                {% endfor %}
+                <li><a href="https://instagram.com/{{ site.author.instagram }}" target="_blank">Instagram</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main class="content">
-    {{ content }}
-  </main>
+    <main>{{ content }}</main>
 
-  <footer class="site-footer">
-    <p>© 2025 Доктор Стафий Диана Викторовна. Эндокринолог, Нутрициолог.</p>
-  </footer>
+    <footer class="container">
+        <hr>
+        <p>&copy; 2024 Практика "Доктор Стафий". {{ site.author.address }}</p>
+        <p>Email: {{ site.email }} | Instagram: <a href="https://instagram.com/{{ site.author.instagram }}">@{{ site.author.instagram }}</a></p>
+    </footer>
 </body>
 </html>
