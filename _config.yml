@@ -14,7 +14,7 @@ navigation:
   - { title: "Главная", link: "/" }
   - { title: "О враче", link: "/about/" }
   - { title: "Отзывы", link: "/#reviews" }
-  - { title: "Отзывы", link: "/#blog" }
+  - { title: "Блог", link: "/#blog" }
   - { title: "Запись", link: "/booking/" }
 
 markdown: kramdown
