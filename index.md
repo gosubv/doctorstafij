@@ -44,3 +44,13 @@ layout: default
     <div class="card"><h3>Нутрициолог</h3><p>Коррекция дефицитов</p></div>
   </div>
 </section>
+
+<section id="reviews">
+  {% for review in site.data.reviews %}
+  <div class="review-box" itemprop="review" itemscope itemtype="https://schema.org/Review">
+    <span itemprop="author">{{ review.name }}</span>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <p itemprop="reviewBody">{{ review.text }}</p>
+  </div>
+  {% endfor %}
+</section>
