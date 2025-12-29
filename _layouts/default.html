@@ -54,21 +54,7 @@
             Перейти в профиль @dianastafiy →
         </a>
     </div>
-
-    <div class="insta-dynamic-feed">
-        {% for post in site.data.insta_feed limit:3 %}
-        <a href="{{ post.link }}" target="_blank" class="insta-post-card">
-            <div>
-                <div class="insta-category">{{ post.category }}</div>
-                <h4 class="insta-title">{{ post.title }}</h4>
-            </div>
-            <div class="insta-arrow">
-                Читать пост 
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </div>
-        </a>
-        {% endfor %}
-    </div>
+            
 </div>
 
         <div style="flex: 1; min-width: 200px;">
