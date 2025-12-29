@@ -3,56 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <title>{{ page.title }} | Доктор Стафий</title>
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="container">
-            <a href="{{ site.baseurl }}/" class="logo">Доктор Стафий</a>
+            <a href="#hero" class="logo">Доктор Стафий</a>
             <ul class="nav-links">
-                {% for item in site.navigation %}
-                <li><a href="{{ item.link | relative_url }}">{{ item.title }}</a></li>
-                {% endfor %}
-                <li><a href="https://instagram.com/{{ site.author.instagram }}" target="_blank">Instagram</a></li>
+                <li><a href="#about">О враче</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#booking" class="btn-nav">Записаться</a></li>
             </ul>
         </nav>
     </header>
 
     <main>{{ content }}</main>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Physician",
-  "name": "Доктор Стафий Диана Викторовна",
-  "image": "https://gosubv.github.io/doctorstafij/assets/img/logo.jpg",
-  "medicalSpecialty": ["Endocrinology", "Nutritionist"],
-  "telephone": "+77152000000",
-  "email": "doctor.stafij@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ул. Ауэзова 133",
-    "addressLocality": "Петропавловск",
-    "addressRegion": "Северо-Казахстанская область",
-    "addressCountry": "KZ"
-  },
-  "openingHours": "Mo-Fr 09:00-18:00",
-  "url": "https://gosubv.github.io/doctorstafij/",
-  "sameAs": [
-    "https://www.instagram.com/dianastafiy/"
-  ]
-}
-</script>
-    
     <footer class="container">
-        <hr>
-        <p>&copy; 2025 "Доктор Стафий". {{ site.author.address }}</p>
-        <p>Email: {{ site.email }} | Instagram: <a href="https://instagram.com/{{ site.author.instagram }}">@{{ site.author.instagram }}</a></p>
+        <div style="text-align: center; padding: 40px 0;">
+            <p>&copy; 2025 Доктор Стафий Диана Викторовна. г. Петропавловск, ул. Ауэзова 133</p>
+            <a href="https://instagram.com/dianastafiy" target="_blank" class="insta-link">Instagram @dianastafiy</a>
+        </div>
     </footer>
+
+    <script>
+        // Анимация появления блоков при скролле
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach((el) => observer.observe(el));
+
+        // Плавный скролл для Safari и старых браузеров
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
