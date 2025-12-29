@@ -37,18 +37,20 @@ title: Доктор Стафий | Эндокринолог и нутрицио�
     </div>
 </section>
 
-<section id="reviews" style="background: var(--accent-light); padding: 80px 0;">
-    <div class="container">
-        <h2 style="text-align: center;">Отзывы пациентов</h2>
-        <div class="reviews-slider" style="display: flex; overflow-x: auto; gap: 20px; padding: 20px 0;">
-            <div class="card" style="min-width: 300px; border-left: none; border-top: 4px solid var(--accent-mint);">
-                <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-                <p>"Диана Викторовна очень внимательный врач. Всё объяснила, назначила только нужные анализы. Самочувствие улучшилось через 2 недели."</p>
-                <cite>— Александра К.</cite>
+<section id="reviews">
+        <h2>Отзывы пациентов</h2>
+        <div class="grid">
+            {% for i in (1..6) %}
+            <div class="card" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5">⭐⭐⭐⭐⭐
+                </div>
+                <p itemprop="reviewBody">Благодарю Диану Викторовну за профессионализм. Очень грамотный подход к лечению!</p>
+                <strong itemprop="author">Пациент {{ i }}</strong>
             </div>
-            </div>
-    </div>
-</section>
+            {% endfor %}
+        </div>
+    </section>
 
 <section id="map" style="padding: 60px 0;">
     <div class="container">
