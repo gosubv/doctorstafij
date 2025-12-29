@@ -21,16 +21,43 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
                 <h2 style="font-size: 2.5rem;">О враче</h2>
                 <p><b>Стафий Диана Викторовна</b> — врач-эндокринолог первой категории, нутрициолог. Стаж работы более 12 лет.</p>
                 <p>Специализируюсь на лечении патологий щитовидной железы, сахарного диабета, ожирения и коррекции дефицитных состояний.</p>
-                <h3>Сертификаты</h3>
-                <div class="gallery">
-                    <img src="./images/diploma1.jpg" alt="Диплом">
-                    <img src="./images/diploma2.jpg" alt="Сертификат">
-                </div>
             </div>
             <div style="flex: 1; min-width: 300px; background: var(--accent); height: 500px; border-radius: 20px; overflow: hidden;">
                  <img src="./images/doctor.png" alt="Диана Викторовна" style="width:100%; height:100%; object-fit: cover;">
             </div>
         </div>
+    </div>
+</section>
+
+<section id="certificates" style="background: #ffffff; padding: 80px 0;">
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px;">
+            <div>
+                <h2 style="margin-bottom: 10px;">Сертификаты и дипломы</h2>
+                <p>Подтвержденная квалификация и постоянное обучение</p>
+            </div>
+            <div style="color: var(--accent-mint); font-size: 0.9rem; font-weight: bold;">
+                Листайте вправо →
+            </div>
+        </div>
+
+        <div class="diploma-carousel" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+            {% for item in site.data.diplomas %}
+            <div class="diploma-card">
+                <img src="{{ item.image | relative_url }}" 
+                     alt="{{ item.title }}" 
+                     class="diploma-image" 
+                     itemprop="image">
+                <div class="diploma-info">
+                    <p itemprop="name">{{ item.title }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <p style="text-align: center; font-size: 0.8rem; color: #99aaaa; margin-top: 20px;">
+            * Нажмите и удерживайте изображение, чтобы увеличить его
+        </p>
     </div>
 </section>
 
