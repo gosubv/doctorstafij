@@ -4,6 +4,9 @@
     --bg-light: #f8faf9;
     --font-heading: 'Libre Baskerville', serif;
     --font-body: 'Source Sans 3', sans-serif;
+    --primary-dark: #1a4d4d;
+    --accent-mint: #7fc8b4;
+    --text-light: #e0f2f1;
 }
 
 html { scroll-behavior: smooth; } /* Плавный скролл одной строкой */
