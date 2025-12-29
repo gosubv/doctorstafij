@@ -23,12 +23,12 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
                 <p>Специализируюсь на лечении патологий щитовидной железы, сахарного диабета, ожирения и коррекции дефицитных состояний.</p>
                 <h3>Сертификаты</h3>
                 <div class="gallery">
-                    <img src="https://newlifediagn.kz/images/diploma1.jpg" alt="Диплом">
-                    <img src="https://newlifediagn.kz/images/diploma2.jpg" alt="Сертификат">
+                    <img src="/images/diploma1.jpg" alt="Диплом">
+                    <img src="/images/diploma2.jpg" alt="Сертификат">
                 </div>
             </div>
             <div style="flex: 1; min-width: 300px; background: var(--accent); height: 500px; border-radius: 20px; overflow: hidden;">
-                 <img src="https://newlifediagn.kz/images/doctors/stafij.jpg" alt="Диана Викторовна" style="width:100%; height:100%; object-fit: cover;">
+                 <img src="/images/doctor.png" alt="Диана Викторовна" style="width:100%; height:100%; object-fit: cover;">
             </div>
         </div>
     </div>
