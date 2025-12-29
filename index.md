@@ -1,89 +1,61 @@
 ---
 layout: default
-title: Главная
+title: Доктор Стафий | Эндокринолог и нутрициолог
 ---
 
 <section class="hero">
     <div class="container">
-        <span class="badge-online">● Приём онлайн доступен</span>
-        <h1>Стафий Диана Викторовна</h1>
-        <p>Врач эндокринолог первой категории, нутрициолог с 12-летним стажем.</p>
-        <a href="{{ site.baseurl }}/booking/" class="btn-primary">Записаться на прием</a>
+        <div class="badge-online">Доступна онлайн-консультация</div>
+        <h1>Доктор Стафий</h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px;">
+            Системный подход к здоровью: эндокринология, диетология и функциональная нутрициология в Петропавловске.
+        </p>
+        <a href="{{ site.baseurl }}/booking/" class="cta-button">Записаться на прием</a>
     </div>
 </section>
 
-<div class="container">
-    <section id="services">
-        <h2>Виды консультаций</h2>
-        <div class="grid">
+<section id="services" style="padding: 60px 0;">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 40px;">Виды приемов</h2>
+        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             <div class="card">
-                <h3>Эндокринология</h3>
-                <p>Первичный прием: диагностика щитовидной железы, обмена веществ.</p>
+                <h3>Первичный прием эндокринолога</h3>
+                <p>Полный разбор жалоб, осмотр, интерпретация анализов и постановка диагноза.</p>
+                <strong>Цена: от 10 000 ₸</strong>
             </div>
             <div class="card">
-                <h3>Нутрициология</h3>
-                <p>Составление плана питания, коррекция дефицитов витаминов и минералов.</p>
+                <h3>Консультация нутрициолога</h3>
+                <p>Разбор дефицитов, коррекция рациона, подбор нутрицевтической поддержки.</p>
+                <strong>Цена: от 12 000 ₸</strong>
             </div>
             <div class="card">
                 <h3>Повторный прием</h3>
-                <p>Анализ результатов обследования и корректировка терапии.</p>
+                <p>Контроль динамики лечения и коррекция терапии.</p>
+                <strong>Цена: от 7 000 ₸</strong>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="how-it-works">
-        <h2>Как проходит прием</h2>
-        <div itemscope itemtype="https://schema.org/HowTo">
-            <div itemprop="step"><b>1. Сбор жалоб:</b> Подробное обсуждение состояния здоровья и симптомов.</div>
-            <div itemprop="step"><b>2. Осмотр:</b> Оценка состояния кожных покровов, щитовидной железы, измерение давления.</div>
-            <div itemprop="step"><b>3. Анализ:</b> Изучение имеющихся анализов или назначение новых.</div>
-            <div itemprop="step"><b>4. План:</b> Выдача рекомендаций по лечению и образу жизни.</div>
-        </div>
-    </section>
-
-    <section id="reviews">
-        <h2>Отзывы пациентов</h2>
-        <div class="grid">
-            {% for i in (1..6) %}
-            <div class="card" itemprop="review" itemscope itemtype="https://schema.org/Review">
-                <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                    <meta itemprop="ratingValue" content="5">⭐⭐⭐⭐⭐
-                </div>
-                <p itemprop="reviewBody">Благодарю Диану Викторовну за профессионализм. Очень грамотный подход к лечению!</p>
-                <strong itemprop="author">Пациент {{ i }}</strong>
+<section id="reviews" style="background: var(--accent-light); padding: 80px 0;">
+    <div class="container">
+        <h2 style="text-align: center;">Отзывы пациентов</h2>
+        <div class="reviews-slider" style="display: flex; overflow-x: auto; gap: 20px; padding: 20px 0;">
+            <div class="card" style="min-width: 300px; border-left: none; border-top: 4px solid var(--accent-mint);">
+                <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
+                <p>"Диана Викторовна очень внимательный врач. Всё объяснила, назначила только нужные анализы. Самочувствие улучшилось через 2 недели."</p>
+                <cite>— Александра К.</cite>
             </div>
-            {% endfor %}
-        </div>
-    </section>
+            </div>
+    </div>
+</section>
 
-    <section id="location">
-        <h2>Как нас найти</h2>
-        <p>{{ site.author.address }}</p>
-        <div style="width: 100%; height: 400px; background: #eee; border-radius: 15px; overflow: hidden;">
-            <iframe src="https://yandex.ru/map-widget/v1/?ll=69.1389,54.8631&z=16&text=Петропавловск,Ауэзова,133" width="100%" height="400" frameborder="0"></iframe>
+<section id="map" style="padding: 60px 0;">
+    <div class="container">
+        <h2>Контакты и проезд</h2>
+        <p>г. Петропавловск, ул. Ауэзова 133, Магия Рук</p>
+        <div style="border-radius: 15px; overflow: hidden; border: 2px solid var(--accent-light);">
+            <iframe src="https://yandex.ru/map-widget/v1/?ll=69.1389,54.8631&z=16&text=Петропавловск,Ауэзова,133" width="100%" height="450" frameborder="0"></iframe>
         </div>
-    </section>
-</div>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Physician",
-  "name": "Стафий Диана Викторовна",
-  "image": "{{ site.url }}{{ site.baseurl }}/assets/img/photo.jpg",
-  "description": "{{ site.description }}",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ул. Ауэзова 133",
-    "addressLocality": "Петропавловск",
-    "addressCountry": "KZ"
-  },
-  "url": "{{ site.url }}{{ site.baseurl }}",
-  "telephone": "{{ site.author.phone }}",
-  "priceRange": "$$",
-  "hasCredential": {
-    "@type": "EducationalOccupationalCredential",
-    "credentialCategory": "Диплом врача, сертификат эндокринолога"
-  }
-}
-</script>
+    </div>
+</section>
