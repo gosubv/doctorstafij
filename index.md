@@ -166,4 +166,5 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
         <p>г. Петропавловск, ул. Ауэзова 133</p>
         <iframe src="https://yandex.kz/maps/org/doktor_stafiy/96035534355/?ll=69.151413%2C54.891331&z=11" width="100%" height="400" frameborder="0" style="border-radius: 15px;"></iframe>
     </div>
+    
 </section>
