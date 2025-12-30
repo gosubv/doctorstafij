@@ -142,12 +142,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
                 Выберите дату и доступный временной слот:
             </div>
 
-            <iframe 
-                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2i5tRlXYaJ8xwBVwlNWhMC_qlRVYVaD38cEBtIHm9Y6tfuqlr7fghSu_O610_o7RjaenYaAW40?gv=true" 
-                style="border: 0" 
-                width="100%" 
-                height="700" 
-                frameborder="0">
+            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2i5tRlXYaJ8xwBVwlNWhMC_qlRVYVaD38cEBtIHm9Y6tfuqlr7fghSu_O610_o7RjaenYaAW40?gv=true" style="border: 0" width="100%" height="700" frameborder="0">
             </iframe>
         </div>
 
@@ -168,37 +163,31 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 
         <div class="reviews-grid">
             {% for review in site.data.reviews limit:6 %}
-            <div class="review-card" itemscope itemtype="https://schema.org/Review">
-                <div class="review-stars">
-                    {% for i in (1..5) %}★{% endfor %}
-                </div>
+                <div class="review-card" itemscope itemtype="https://schema.org/Review">
+                    <div class="review-stars">
+                        {% for i in (1..5) %}★{% endfor %}
+                    </div>
                 
-                <div class="review-text" itemprop="reviewBody">
-                    {{ review.text }}
-                </div>
-
-                <div class="review-info">
-                    <div style="width: 45px; height: 45px; background: var(--accent-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-dark); font-weight: bold;">
-                        {{ review.name | slice: 0 }}
+                    <div class="review-text" itemprop="reviewBody">
+                        {{ review.text }}
                     </div>
-                    <div>
-                        <span class="author-name" itemprop="author">{{ review.name }}</span>
-                        <div style="font-size: 0.85rem; color: #99aaaa;">Пациент клиники</div>
+
+                    <div class="review-info">
+                        <div style="width: 45px; height: 45px; background: var(--accent-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-dark); font-weight: bold;">
+                            {{ review.name | slice: 0 }}
+                        </div>
+                        <div>
+                            <span class="author-name" itemprop="author">{{ review.name }}</span>
+                            <div style="font-size: 0.85rem; color: #99aaaa;">Пациент клиники</div>
+                        </div>
+                    </div>
+
+                    <meta itemprop="datePublished" content="{{ review.date }}">
+                    <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" style="display:none;">
+                        <meta itemprop="ratingValue" content="5">
                     </div>
                 </div>
-
-                <meta itemprop="datePublished" content="{{ review.date }}">
-                <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" style="display:none;">
-                    <meta itemprop="ratingValue" content="5">
-                </div>
-            </div>
             {% endfor %}
-        </div>
-
-        <div style="text-align: center; margin-top: 60px;">
-            <a href="https://www.instagram.com/{{ site.author.instagram }}/" target="_blank" class="cta-button" style="background: white; color: var(--primary-dark); border: 2px solid var(--accent-mint);">
-                Читать все отзывы в Instagram
-            </a>
         </div>
     </div>
 </section>
@@ -206,8 +195,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 <section id="map">
     <div class="container">
         <h2>Где я принимаю</h2>
-        <p>г. Петропавловск, ул. Ауэзова 133</p>
+        <p>{{ site.author.address }}</p>
         <iframe src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=96035534355" width="100%" height="400" frameborder="0" style="border-radius: 15px;"></iframe>
     </div>
-    
 </section>
