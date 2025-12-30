@@ -89,8 +89,8 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
         <div class="card-grid glass-panel">
             {% for item in site.data.services %}
                 <div class="card price-item">
-                    <span><h3>{{ item.title }}</h3></span>
-                    <span><p>{{ item.text }}</p></span>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.text }}</p>
                     <span class="price-val"><p><b>{{ item.price }}</b></p></span>
                 </div>
             {% endfor %}
@@ -112,16 +112,16 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 
         <div class="blog-grid">
             {% for post in site.data.insta_feed limit:3 %}
-            <a href="{{ post.link }}" target="_blank" class="blog-card">
-                <div>
-                    <div class="category">{{ post.category }}</div>
-                    <h3>{{ post.title }}</h3>
-                </div>
-                <div class="blog-link">
-                    Смотреть в Instagram 
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-                </div>
-            </a>
+                <a href="{{ post.link }}" target="_blank" class="blog-card">
+                    <div>
+                        <div class="category">{{ post.category }}</div>
+                        <h3>{{ post.title }}</h3>
+                    </div>
+                    <div class="blog-link">
+                        Смотреть в Instagram 
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </div>
+                </a>
             {% endfor %}
         </div>
     </div>
@@ -149,7 +149,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
                 height="700" 
                 frameborder="0">
             </iframe>
-            </div>
+        </div>
 
         <div style="text-align: center; margin-top: 30px;">
             <p style="font-size: 0.9rem; color: #99aaaa;">
