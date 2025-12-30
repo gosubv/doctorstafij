@@ -173,13 +173,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
                     </div>
 
                     <div class="review-info">
-                        <div style="width: 45px; height: 45px; background: var(--accent-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-dark); font-weight: bold;">
-                            {{ review.name | slice: 0 }}
-                        </div>
-                        <div>
-                            <span class="author-name" itemprop="author">{{ review.name }}</span>
-                            <div style="font-size: 0.85rem; color: #99aaaa;">Пациент клиники</div>
-                        </div>
+                        <span class="author-name" itemprop="author">{{ review.name }}</span>
                     </div>
 
                     <meta itemprop="datePublished" content="{{ review.date }}">
