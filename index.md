@@ -43,7 +43,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
     <div class="container">
         <h2 class="section-title">Направления работы</h2>
         <div class="spec-grid">
-            {% for item in site.data.diplomas %} 
+            {% for item in site.data.specializations %} 
                 <div class="spec-card">
                     <div class="spec-icon-wrapper">{{ item.icon }}</div>
                     <h3>{{ item.title }}</h3>
@@ -68,15 +68,12 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 
         <div class="diploma-carousel" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
             {% for item in site.data.diplomas %}
-            <div class="diploma-card">
-                <img src="{{ item.image | relative_url }}" 
-                     alt="{{ item.title }}" 
-                     class="diploma-image" 
-                     itemprop="image">
-                <div class="diploma-info">
-                    <p itemprop="name">{{ item.title }}</p>
+                <div class="diploma-card">
+                    <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" class="diploma-image" itemprop="image">
+                    <div class="diploma-info">
+                        <p itemprop="name">{{ item.title }}</p>
+                    </div>
                 </div>
-            </div>
             {% endfor %}
         </div>
         
@@ -90,21 +87,13 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
     <div class="container price-section">
         <h2 style="text-align: center;">Услуги и цены</h2>
         <div class="card-grid glass-panel">
-            <div class="card price-item">
-                <span><h3>Эндокринолог</h3></span>
-                <span><p>Первичная консультация, осмотр, план диагностики.</p></span>
-                <span class="price-val"><p><b>10 000 ₸</b></p></span>
-            </div>
-            <div class="card price-item">
-                <span><h3>Нутрициолог</h3></span>
-                <span><p>Разбор рациона, восполнение дефицитов витаминов.</p></span>
-                <span class="price-val"><p><b>15 000 ₸</b></p></span>
-            </div>
-            <div class="card price-item">
-                <span><h3>Повторный прием</h3></span>
-                <span><p>Коррекция терапии по результатам анализов.</p></span>
-                <span class="price-val"><p><b>7 000 ₸</b></p></span>
-            </div>
+            {% for item in site.data.services %}
+                <div class="card price-item">
+                    <span><h3>{{ item.title }}</h3></span>
+                    <span><p>{{ item.text }}</p></span>
+                    <span class="price-val"><p><b>{{ item.price }}</b></p></span>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>
