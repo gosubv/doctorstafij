@@ -6,21 +6,7 @@ url: "https://gosubv.github.io"
 
 author:
   name: "Стафий Диана Викторовна"
-  instagram: "dianastafiy"
-  address: "г. Петропавловск, ул. Ауэзова 133"
-  phone: "+7 (707) 850-0312" # Замените на актуальный
-
-navigation:
-  - { title: "Главная", link: "/" }
-  - { title: "О враче", link: "/about/" }
-  - { title: "Отзывы", link: "/#reviews" }
-  - { title: "Блог", link: "/#blog" }
-  - { title: "Запись", link: "/booking/" }
-
-markdown: kramdown
-theme: minima # Или оставить пустым при кастомной верстке
-
-author:
-  name: "Стафий Диана Викторовна"
   instagram_url: "https://www.instagram.com/dianastafiy/"
   instagram_handle: "@dianastafiy"
+  address: "г. Петропавловск, ул. Ауэзова 133 (Мания Рук)"
+  phone: "+7 (707) 850-0312"
