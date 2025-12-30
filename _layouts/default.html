@@ -3,125 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | Доктор Стафий</title>
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-    <link href="https://fonts.googleapis.com/css2?family=Bad+Script:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>{{ page.title }} | Стафий Диана</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-
-<div class="liquid-bg">
-    <div class="blob" style="top: -10%; left: -10%;"></div>
-    <div class="blob" style="bottom: 10%; right: 10%; background: #e3f2fd; animation-delay: -5s;"></div>
-</div>
-
-<div class="liquid-bg">
-    <div class="blob"></div>
-</div>
-
-<div class="liquid-bg"><div class="blob"></div></div>
-    
-<header class="main-header">
-    <div class="container nav-container">
-        <a href="#hero" class="logo-link">
-            <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Доктор Стафий" class="header-logo">
-        </a>
-        
-        <button class="menu-toggle" aria-label="Открыть меню">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-
-        <nav class="nav-menu">
-            <ul class="nav-links">
-                <li><a href="#about">О враче</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#blog">Блог</a></li>
-                <li><a href="#reviews">Отзывы</a></li>
-                <li><a href="#booking" class="btn-nav">Записаться</a></li>
-                 <li>
-                    <a href="{{ site.author.instagram_url }}" target="_blank" aria-label="Instagram" style="display: flex; align-items: center;">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 5px;">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                        Instagram
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-    
-
-    <main>{{ content }}</main>
-    
-<footer class="footer-horizontal">
-    <div class="container footer-content">
-        <div class="footer-item">
-            <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Logo" style="height: 40px;">
+    <div class="liquid-bg"></div> <header class="main-header">
+        <div class="container nav-container">
+            <div class="logo-text">Доктор Стафий</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">О враче</a></li>
+                    <li><a href="#prices">Услуги</a></li>
+                    <li><a href="#booking" class="btn-appointment">Записаться</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="footer-item">
-            <p>г. Петропавловск, ул. Ауэзова 133</p>
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Стафий Диана Викторовна. Эндокринология и Нутрициология.</p>
         </div>
-
-        <nav class="footer-item">
-            <ul class="footer-links">
-                <li><a href="#about">О враче</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#booking">Запись</a></li>
-            </ul>
-        </nav>
-
-        <div class="footer-item">
-            <a href="https://www.instagram.com/dianastafiy/" target="_blank" class="footer-insta">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="margin-right:8px;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                Instagram
-            </a>
-        </div>
-    </div>
-</footer>
-
-    <script>
-        // Анимация появления блоков при скролле
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('section').forEach((el) => observer.observe(el));
-
-        // Плавный скролл для Safari и старых браузеров
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-
-    <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        // Анимация гамбургера (опционально)
-        menuToggle.classList.toggle('open');
-    });
-
-    // Закрытие меню при клике на ссылку (важно для одностраничников)
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
-    });
-</script>
+    </footer>
 </body>
 </html>
