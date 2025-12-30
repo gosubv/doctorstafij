@@ -15,7 +15,7 @@
 </div>
 
 <header class="main-header">
-    <div class="nav-container">
+    <div class="container nav-container">
         <a href="#hero" class="logo-link">
             <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Доктор Стафий" class="header-logo">
         </a>
@@ -50,9 +50,7 @@
     </div>
 </header>
 
-    
-
-    <main>{{ content }}</main>
+<main>{{ content }}</main>
     
 <footer class="footer-horizontal">
     <div class="container footer-content">
@@ -61,14 +59,18 @@
         </div>
 
         <div class="footer-item">
-            <p>г. Петропавловск, ул. Ауэзова 133</p>
+            <p>{{ site.author.address }}</p>
         </div>
 
         <nav class="footer-item">
             <ul class="footer-links">
-                <li><a href="#about">О враче</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#booking">Запись</a></li>
+                {% for item in site.data.menu %}
+                    <li>
+                        {% if item.is_footer %}
+                            <a href="{{ item.link }}">{{ item.title }}</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
             </ul>
         </nav>
 
@@ -81,30 +83,26 @@
     </div>
 </footer>
 
-    <script>
-        // Анимация появления блоков при скролле
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('section').forEach((el) => observer.observe(el));
-
-        // Плавный скролл для Safari и старых браузеров
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+<script>
+    // Анимация появления блоков при скролле
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('section').forEach((el) => observer.observe(el));
+    // Плавный скролл для Safari и старых браузеров
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
                 });
             });
         });
-    </script>
-
-    <script>
+    
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
@@ -112,14 +110,15 @@
         navMenu.classList.toggle('active');
         // Анимация гамбургера (опционально)
         menuToggle.classList.toggle('open');
-    });
+        });
 
     // Закрытие меню при клике на ссылку (важно для одностраничников)
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
+            });
         });
-    });
 </script>
+
 </body>
 </html>
