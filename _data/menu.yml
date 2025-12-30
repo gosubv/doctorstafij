@@ -1,15 +1,15 @@
 - title: "О докторе"
   link: "#about"
-  button: false
+  is_button: false
 - title: "Услуги"
   link: "#services"
-  button: false
+  is_buttonbutton: false
 - title: "Блог"
   link: "#blog"
-  button: false
+  is_buttonbutton: false
 - title: "Отзывы"
   link: "#reviews"
-  button: false
+  is_buttonbutton: false
 - title: "Записаться"
   link: "#booking"
-  button: true
+  is_buttonbutton: true
