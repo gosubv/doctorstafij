@@ -1,0 +1,30 @@
+<header class="main-header">
+    <div class="container nav-container">
+        <a href="#hero" class="logo-link">
+            {% include logo.html %}
+        </a>
+        
+        <button class="menu-toggle" aria-label="Открыть меню">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                {% for item in site.data.menu %}
+                    <li>
+                        {% unless item.is_button %}
+                            <a href="{{ item.link }}">{{ item.title }}</a>
+                        {% else %}
+                            <a href="{{ item.link }} class="btn-nav"">{{ item.title }}</a>
+                        {% endunless %}
+                    </li>
+                {% endfor %}
+                    <li>
+                        {% include instagram.html %}
+                    </li>
+            </ul>
+        </nav>
+    </div>
+</header>
