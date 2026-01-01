@@ -85,7 +85,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 
 <section id="services" style="background: #f0f7f5;">
     <div class="container price-section">
-        <h2 style="text-align: center;">Услуги и цены</h2>
+        <h2 class="section-title" style="text-align: center;">Услуги и цены</h2>
         <div class="card-grid glass-panel">
             {% for item in site.data.services %}
                 <div class="card price-item">
