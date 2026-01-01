@@ -6,11 +6,11 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 <section id="hero" class="hero">
     <div class="container">
         <span class="badge-online">Консультация в клинике и онлайн</span>
-        <h1 style="font-size: 3.5rem; margin: 20px 0;">Доктор Стафий</h1>
-        <p style="font-size: 1.4rem; color: var(--primary); margin-bottom: 40px;">
+        <h1 class="hero-title">Доктор Стафий</h1>
+        <p class="hero-subtitle">
             Стафий Диана Викторовна — Ваш эксперт в мире гормонального здоровья и осознанного питания.
         </p>
-        <a href="#booking" class="btn-nav" style="padding: 20px 40px; font-size: 1.1rem; text-decoration: none;">Онлайн запись на консультацию</a>
+        <a href="#booking" class="btn-nav hero-btn">Онлайн запись на консультацию</a>
     </div>
 </section>
 
@@ -54,14 +54,14 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
     </div>
 </section>
 
-<section id="certificates" style="background: #ffffff; padding: 80px 0;">
+<section id="certificates" class="certificates-section">
     <div class="container">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px;">
+        <div class="certificates-header">
             <div>
-                <h2 style="margin-bottom: 10px;">Сертификаты и дипломы</h2>
+                <h2 class="certificates-title">Сертификаты и дипломы</h2>
                 <p>Подтвержденная квалификация и постоянное обучение</p>
             </div>
-            <div style="color: var(--accent-mint); font-size: 0.9rem; font-weight: bold;">
+            <div class="swipe-hint">
                 Листайте вправо →
             </div>
         </div>
@@ -77,16 +77,16 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
             {% endfor %}
         </div>
         
-        <p style="text-align: center; font-size: 0.8rem; color: #99aaaa; margin-top: 20px;">
+        <p class="zoom-hint">
             * Нажмите и удерживайте изображение, чтобы увеличить его
         </p>
     </div>
 </section>
 
-<section id="services" style="background: #f0f7f5;">
+<section id="services" class="services-section">
     <div class="container price-section">
-        <h2 class="section-title" style="text-align: center;">Услуги и цены</h2>
-        <div class="card-grid glass-panel">
+        <h2 class="section-title services-title">Услуги и цены</h2>
+        <div class="card-grid">
             {% for item in site.data.services %}
                 <div class="card price-item">
                     <h3>{{ item.title }}</h3>
@@ -100,12 +100,12 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 
 <section id="blog" class="blog-section">
     <div class="container">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
+        <div class="blog-header">
             <div>
-                <h2 style="font-size: 2.8rem; margin: 0;">Блог эксперта</h2>
-                <p style="margin-top: 10px; color: #667e7e;">Актуальные темы эндокринологии и нутрициологии из моего Instagram</p>
+                <h2 class="blog-title">Блог эксперта</h2>
+                <p class="blog-subtitle">Актуальные темы эндокринологии и нутрициологии из моего Instagram</p>
             </div>
-            <a href="{{ site.author.instagram_url }}" target="_blank" class="cta-button" style="background: transparent; border: 2px solid var(--accent-mint); color: var(--primary-dark);">
+            <a href="{{ site.author.instagram_url }}" target="_blank" class="cta-button blog-cta">
                 Все публикации
             </a>
         </div>
@@ -127,45 +127,45 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
     </div>
 </section>
 
-<section id="booking" style="background: linear-gradient(180deg, #f0f7f5 0%, #ffffff 100%); padding: 100px 0;">
+<section id="booking" class="booking-section">
     <div class="container">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Запись на консультацию</h2>
-            <p style="font-size: 1.1rem; color: #4a6363;">
+        <div class="booking-intro">
+            <h2 class="booking-title">Запись на консультацию</h2>
+            <p class="booking-desc">
                 Выберите удобный тип приема и время в календаре ниже. После успешной записи вы получите подтверждение на указанную электронную почту.
             </p>
         </div>
 
-        <div class="booking-container" style="background: white; border-radius: 20px; box-shadow: 0 15px 45px rgba(26, 77, 77, 0.08); overflow: hidden; border: 1px solid var(--accent-light);">
-            <div style="background: var(--primary-dark); color: white; padding: 15px 30px; font-size: 0.9rem; display: flex; align-items: center; gap: 10px;">
-                <span style="background: var(--accent-mint); width: 8px; height: 8px; border-radius: 50%;"></span>
+        <div class="booking-container">
+            <div class="booking-widget-header">
+                <span class="status-dot"></span>
                 Выберите дату и доступный временной слот:
             </div>
 
-            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2i5tRlXYaJ8xwBVwlNWhMC_qlRVYVaD38cEBtIHm9Y6tfuqlr7fghSu_O610_o7RjaenYaAW40?gv=true" style="border: 0" width="100%" height="700" frameborder="0">
+            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2i5tRlXYaJ8xwBVwlNWhMC_qlRVYVaD38cEBtIHm9Y6tfuqlr7fghSu_O610_o7RjaenYaAW40?gv=true" class="booking-iframe" width="100%" height="700" frameborder="0">
             </iframe>
         </div>
 
-        <div style="text-align: center; margin-top: 30px;">
-            <p style="font-size: 0.9rem; color: #99aaaa;">
-                Если у вас возникли вопросы по записи, вы можете написать на <a href="mailto:{{ site.email }}" style="color: var(--primary-dark); font-weight: 600;">{{ site.email }}</a>
+        <div class="booking-footer">
+            <p class="booking-footer-text">
+                Если у вас возникли вопросы по записи, вы можете написать на <a href="mailto:{{ site.email }}" class="booking-email-link">{{ site.email }}</a>
             </p>
         </div>
     </div>
 </section>
 
-<section id="reviews" style="background-color: #fbfdfd;">
+<section id="reviews" class="reviews-section">
     <div class="container">
-        <div style="text-align: center; margin-bottom: 50px;">
-            <h2 style="font-size: 2.8rem;">Отзывы пациентов</h2>
-            <div style="width: 60px; height: 3px; background: var(--accent-mint); margin: 20px auto;"></div>
+        <div class="reviews-header">
+            <h2 class="reviews-title">Отзывы пациентов</h2>
+            <div class="reviews-separator"></div>
         </div>
 
         <div class="reviews-grid">
             {% for review in site.data.reviews limit:6 %}
                 <div class="review-card" itemscope itemtype="https://schema.org/Review">
                     <div class="review-stars">
-                        {% for i in (1..5) %}★{% endfor %}
+                        {% for i in (1..review.rating) %}★{% endfor %}
                     </div>
                 
                     <div class="review-text" itemprop="reviewBody">
@@ -177,7 +177,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
                     </div>
 
                     <meta itemprop="datePublished" content="{{ review.date }}">
-                    <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" style="display:none;">
+                    <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" class="hidden-schema">
                         <meta itemprop="ratingValue" content="5">
                     </div>
                 </div>
@@ -190,6 +190,6 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
     <div class="container">
         <h2>Где я принимаю</h2>
         <p>{{ site.author.address }}</p>
-        <iframe src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=96035534355" width="100%" height="400" frameborder="0" style="border-radius: 15px;"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=96035534355" width="100%" height="400" frameborder="0" class="map-iframe"></iframe>
     </div>
 </section>
