@@ -210,7 +210,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 
         <div class="booking-footer">
             <p class="booking-footer-text"><h2>
-                Если у вас возникли вопросы по записи, вы можете написать в WhatsApp или позвонить по номеру +7 (707) 850 0312, либо написать на <a href="mailto:{{ site.email }}" class="booking-email-link">{{ site.email }}</a>
+                Если у вас возникли вопросы по записи, вы можете написать в WhatsApp или позвонить по номеру {{ site.author.phone }}, либо написать на <a href="mailto:{{ site.email }}" class="booking-email-link">{{ site.email }}</a>
             </h2></p>
         </div>
     </div>
