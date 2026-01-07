@@ -6,7 +6,7 @@ baseurl: "/"
 url: "https://gosubv.github.io"
 lang: ru
 locale: ru_RU
-logo: "/assets/logo.png"
+logo: "/assets/img/logo.png"
 
 social:
   name: Доктор Стафий
