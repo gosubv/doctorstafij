@@ -3,7 +3,7 @@ email: doctor.stafij@gmail.com
 description: "Стафий Диана Викторовна — врач эндокринолог, нутрициолог в Петропавловске. Системный подход к гормональному здоровью и питанию."
 tagline: Системный подход к гормональному здоровью и питанию.
 baseurl: "/"
-url: "https://gosubv.github.io"
+url: "https://doctorstafij.pages.dev/"
 lang: ru
 locale: ru_RU
 logo: "/assets/img/logo.png"
@@ -19,9 +19,6 @@ author:
   instagram_handle: "@dianastafiy"
   address: "г. Петропавловск, ул. Ауэзова 133 (Магия Рук)"
   phone: "+7 (707) 850-0312"
-
-plugins:
-  - jekyll-seo-tag
 
 exclude:
   - .vscode/
