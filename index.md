@@ -10,7 +10,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
         <p class="hero-subtitle">
             Стафий Диана Викторовна — Ваш эксперт в мире гормонального здоровья и осознанного питания.
         </p>
-        <a href="#booking" class="btn-nav hero-btn">Онлайн запись на консультацию</a>
+        <a href="#booking" class="btn-nav hero-btn">Запись на консультацию</a>
     </div>
 </section>
 
@@ -19,7 +19,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
         
         <div class="about-hero">
             <div class="about-image">
-                <img src="{{ '/assets/img/doctor.png' | relative_url }}" alt="Стафий Диана Викторовна" class="doctor-img">
+                <img src="{{ '/assets/img/doctor_02.png' | relative_url }}" alt="Стафий Диана Викторовна" class="doctor-img" />
                 <div class="experience-badge glass-panel">
                     <span class="years">14+</span>
                     <span class="exp-text">лет практики</span>
@@ -210,7 +210,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 
         <div class="booking-footer">
             <p class="booking-footer-text"><h2>
-                Если у вас возникли вопросы по записи, вы можете написать в WhatsApp или позвонить по номеру {{ site.author.phone }}, либо написать на <a href="mailto:{{ site.email }}" class="booking-email-link">{{ site.email }}</a>
+                Если у вас возникли вопросы по записи, вы можете написать в WhatsApp по номеру {{ site.author.phone }}.
             </h2></p>
         </div>
     </div>
