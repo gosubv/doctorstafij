@@ -1,3 +1,6 @@
+- date: "2026-01-12"
+  time: ""
+  is_off: true
 - date: "2026-01-13"
   time: "18:00 - 19:30"
   is_off: false
@@ -34,3 +37,6 @@
 - date: "2026-01-24"
   time: "12:00 - 16:00"
   is_off: false
+- date: "2026-01-25"
+  time: ""
+  is_off: true
