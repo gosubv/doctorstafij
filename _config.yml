@@ -19,6 +19,7 @@ author:
   instagram_handle: "@dianastafiy"
   address: "г. Петропавловск, ул. Ауэзова 133 (Магия Рук)"
   phone: "+7 (707) 850-0312"
+  phonewhatsapp: "77078500312"
 
 exclude:
   - .vscode/

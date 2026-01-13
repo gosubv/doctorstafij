@@ -191,27 +191,67 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 
 <section id="booking" class="booking-section">
     <div class="container">
-        <div class="booking-intro">
-            <h2 class="booking-title">Запись на консультацию</h2>
-            <p class="booking-desc">
-                Выберите удобный тип приема и время в календаре ниже. После успешной записи вы получите подтверждение на указанную электронную почту.
-            </p>
-        </div>
-
-        <div class="booking-container">
-            <div class="booking-widget-header">
-                <span class="status-dot"></span>
-                Выберите дату и доступный временной слот:
+        <div class="booking-footer">
+            <h2 class="booking-title">Запись на прием</h2>
+            
+            <div class="calendar-container">
+                <p style="margin-bottom: 15px; opacity: 0.8;">График приема на ближайшие 2 недели:</p>
+                <div id="calendar-ribbon" class="calendar-ribbon">
+                    {% assign calendar_items = site.data.calendar %}
+                    {% for item in calendar_items %}
+                        {% assign date_str = item.date %}
+                        
+                        {% assign day_name_eng = date_str | date: "%a" %}
+                        {% assign day_num = date_str | date: "%-d" %}
+                        {% assign month_eng = date_str | date: "%b" %}
+                        
+                        {% case day_name_eng %}
+                            {% when 'Mon' %}{% assign day_name_ru = 'Пн' %}
+                            {% when 'Tue' %}{% assign day_name_ru = 'Вт' %}
+                            {% when 'Wed' %}{% assign day_name_ru = 'Ср' %}
+                            {% when 'Thu' %}{% assign day_name_ru = 'Чт' %}
+                            {% when 'Fri' %}{% assign day_name_ru = 'Пт' %}
+                            {% when 'Sat' %}{% assign day_name_ru = 'Сб' %}
+                            {% when 'Sun' %}{% assign day_name_ru = 'Вс' %}
+                        {% endcase %}
+                        
+                        {% case month_eng %}
+                            {% when 'Jan' %}{% assign month_ru = 'янв' %}
+                            {% when 'Feb' %}{% assign month_ru = 'фев' %}
+                            {% when 'Mar' %}{% assign month_ru = 'мар' %}
+                            {% when 'Apr' %}{% assign month_ru = 'апр' %}
+                            {% when 'May' %}{% assign month_ru = 'мая' %}
+                            {% when 'Jun' %}{% assign month_ru = 'июн' %}
+                            {% when 'Jul' %}{% assign month_ru = 'июл' %}
+                            {% when 'Aug' %}{% assign month_ru = 'авг' %}
+                            {% when 'Sep' %}{% assign month_ru = 'сен' %}
+                            {% when 'Oct' %}{% assign month_ru = 'окт' %}
+                            {% when 'Nov' %}{% assign month_ru = 'ноя' %}
+                            {% when 'Dec' %}{% assign month_ru = 'дек' %}
+                        {% endcase %}
+                        
+                        {% if item.is_off %}
+                            <div class="calendar-day day-off">
+                                <div class="day-name">{{ day_name_ru }}</div>
+                                <div class="day-number">{{ day_num }} {{ month_ru }}</div>
+                                <span class="no-slot">Выходной</span>
+                            </div>
+                        {% else %}
+                            <a href="https://wa.me/{{ site.author.phonewhatsapp }}?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию.%20Желаемая%20дата:%20{{ day_num }}%20{{ month_ru }}." class="calendar-day available" target="_blank">
+                                <div class="day-name">{{ day_name_ru }}</div>
+                                <div class="day-number">{{ day_num }} {{ month_ru }}</div>
+                                <span class="time-slot">{{ item.time }}</span>
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </div>
 
-            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2i5tRlXYaJ8xwBVwlNWhMC_qlRVYVaD38cEBtIHm9Y6tfuqlr7fghSu_O610_o7RjaenYaAW40?gv=true" class="booking-iframe" width="100%" height="700" frameborder="0">
-            </iframe>
-        </div>
-
-        <div class="booking-footer">
-            <p class="booking-footer-text"><h2>
-                Если у вас возникли вопросы по записи, вы можете написать в WhatsApp по номеру {{ site.author.phone }}.
-            </h2></p>
+            <p class="booking-desc"><h3>Для вашего удобства я веду запись через WhatsApp.</h3></p><p><h3>Нажмите кнопку ниже, чтобы начать чат:</h3></p>
+            <div><a href="https://wa.me/{{ site.author.phonewhatsapp }}?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию." class="cta-button btn-whatsapp" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Написать в WhatsApp
+            </a></div>
         </div>
     </div>
 </section>
@@ -251,7 +291,22 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
 <section id="map">
     <div class="container">
         <h2>Где я принимаю</h2>
-        <p>{{ site.author.address }}</p>
+        <p><h3>{{ site.author.address }}</h3></p>
         <iframe src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=96035534355" width="100%" height="400" frameborder="0" class="map-iframe"></iframe>
     </div>
 </section>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/{{ site.author.phonewhatsapp }}?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию." class="whatsapp-float" target="_blank">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Перемещаем кнопку в body, чтобы она не зависела от transform родительских секций
+        const floatBtn = document.querySelector('.whatsapp-float');
+        if (floatBtn) {
+            document.body.appendChild(floatBtn);
+        }
+    });
+</script>
