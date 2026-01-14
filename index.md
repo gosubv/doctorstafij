@@ -195,7 +195,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
             <h2 class="booking-title">Запись на консультацию</h2>
             
             <div class="calendar-container">
-                <p style="margin-bottom: 15px; opacity: 0.8;">График консультаций на ближайшие 2 недели:</p>
+                <p style="margin-bottom: 15px; opacity: 0.8;">График консультаций на ближайшие 3 недели:</p>
 
                 <div id="calendar-ribbon" class="calendar-ribbon">
                     {% assign calendar_items = site.data.calendar %}
@@ -235,7 +235,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
                             <div class="calendar-day day-off">
                                 <div class="day-name">{{ day_name_ru }}</div>
                                 <div class="day-number">{{ day_num }} {{ month_ru }}</div>
-                                <span class="no-slot">Выходной</span>
+                                <span class="no-slot">Нет записи</span>
                             </div>
                         {% else %}
                             <a href="https://wa.me/{{ site.author.phonewhatsapp }}?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию.%20Желаемая%20дата:%20{{ day_num }}%20{{ month_ru }}." class="calendar-day available" target="_blank">
