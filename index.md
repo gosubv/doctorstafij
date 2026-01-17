@@ -195,7 +195,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
             <h2 class="booking-title">Запись на консультацию</h2>
             
             <div class="calendar-container">
-                <p style="margin-bottom: 15px; opacity: 0.8;">График консультаций на ближайшие 3 недели:</p>
+                <p style="margin-bottom: 15px; opacity: 0.8;">График консультаций на ближайшие 2 недели:</p>
 
                 <div id="calendar-ribbon" class="calendar-ribbon">
                     {% assign calendar_items = site.data.calendar %}
