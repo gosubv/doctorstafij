@@ -236,12 +236,20 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
                                 <div class="day-name">{{ day_name_ru }}</div>
                                 <div class="day-number">{{ day_num }} {{ month_ru }}</div>
                                 <span class="no-slot">Нет записи</span>
+                                <span class="no-slot"></span>
                             </div>
                         {% else %}
                             <a href="https://wa.me/{{ site.author.phonewhatsapp }}?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию.%20Желаемая%20дата:%20{{ day_num }}%20{{ month_ru }}." class="calendar-day available" target="_blank">
                                 <div class="day-name">{{ day_name_ru }}</div>
                                 <div class="day-number">{{ day_num }} {{ month_ru }}</div>
                                 <span class="time-slot">{{ item.time }}</span>
+                                <span class="time-slot">
+                                    {% if item.is_online %}
+                                        Онлайн
+                                    {% else %}
+                                        
+                                    {% endif %}
+                                </span>
                             </a>
                         {% endif %}
                     {% endfor %}
