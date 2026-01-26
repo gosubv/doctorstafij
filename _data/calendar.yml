@@ -44,11 +44,11 @@
   is_online: false
 - date: "2026-02-06"
   time: "12:30 - 16:00"
-  is_off: true
+  is_off: false
   is_online: false
 - date: "2026-02-07"
   time: "12:00 - 16:00"
-  is_off: true
+  is_off: false
   is_online: false
 - date: "2026-02-08"
   time: ""
@@ -56,27 +56,27 @@
   is_online: false
 - date: "2026-02-09"
   time: "12:30 - 16:00"
-  is_off: true
+  is_off: false
   is_online: false
 - date: "2026-02-10"
   time: "17:00 - 19:30"
   is_off: false
-  is_online: true
+  is_online: false
 - date: "2026-02-11"
   time: "12:30 - 16:00"
   is_off: false
-  is_online: true
+  is_online: false
 - date: "2026-02-12"
   time: "17:00 - 19:30"
   is_off: false
-  is_online: true
+  is_online: false
 - date: "2026-02-13"
   time: "12:30 - 16:00"
   is_off: false
-  is_online: true
+  is_online: false
 - date: "2026-02-14"
   time: "12:00 - 16:00"
-  is_off: true
+  is_off: false
   is_online: false
 - date: "2026-02-15"
   time: ""
