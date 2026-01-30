@@ -12,11 +12,11 @@
   is_online: false
 - date: "2026-01-29"
   time: "17:00 - 19:30"
-  is_off: false
+  is_off: true
   is_online: false
 - date: "2026-01-30"
   time: "12:30 - 16:00"
-  is_off: false
+  is_off: true
   is_online: false
 - date: "2026-01-31"
   time: "12:00 - 16:00"
@@ -27,23 +27,23 @@
   is_off: true
   is_online: false
 - date: "2026-02-02"
-  time: "12:30 - 16:00"
+  time: "13:00 - 17:00"
   is_off: false
   is_online: false
 - date: "2026-02-03"
-  time: "17:00 - 19:30"
+  time: "15:00 - 19:30"
   is_off: false
   is_online: false
 - date: "2026-02-04"
-  time: "12:30 - 16:00"
+  time: "13:00 - 17:00"
   is_off: false
   is_online: false
 - date: "2026-02-05"
-  time: "17:00 - 19:30"
+  time: "15:00 - 19:30"
   is_off: false
   is_online: false
 - date: "2026-02-06"
-  time: "12:30 - 16:00"
+  time: "13:00 - 17:00"
   is_off: false
   is_online: false
 - date: "2026-02-07"
@@ -55,23 +55,23 @@
   is_off: true
   is_online: false
 - date: "2026-02-09"
-  time: "12:30 - 16:00"
+  time: "13:00 - 17:00"
   is_off: false
   is_online: false
 - date: "2026-02-10"
-  time: "17:00 - 19:30"
+  time: "15:00 - 19:30"
   is_off: false
   is_online: false
 - date: "2026-02-11"
-  time: "12:30 - 16:00"
+  time: "13:00 - 17:00"
   is_off: false
   is_online: false
 - date: "2026-02-12"
-  time: "17:00 - 19:30"
+  time: "15:00 - 19:30"
   is_off: false
   is_online: false
 - date: "2026-02-13"
-  time: "12:30 - 16:00"
+  time: "13:00 - 17:00"
   is_off: false
   is_online: false
 - date: "2026-02-14"
