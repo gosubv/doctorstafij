@@ -8,11 +8,11 @@
   is_online: false
 - date: "2026-02-04"
   time: "13:00 - 17:00"
-  is_off: false
+  is_off: true
   is_online: false
 - date: "2026-02-05"
   time: "15:00 - 19:30"
-  is_off: false
+  is_off: true
   is_online: false
 - date: "2026-02-06"
   time: "13:00 - 17:00"
