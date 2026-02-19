@@ -1,19 +1,19 @@
 
 - date: "2026-02-16"
   time: "13:00 - 17:00"
-  is_off: false
+  is_off: true
   is_online: false
 - date: "2026-02-17"
   time: "15:00 - 19:30"
-  is_off: false
+  is_off: true
   is_online: false
 - date: "2026-02-18"
   time: "13:00 - 17:00"
-  is_off: false
+  is_off: true
   is_online: false
 - date: "2026-02-19"
   time: "15:00 - 19:30"
-  is_off: false
+  is_off: true
   is_online: false
 - date: "2026-02-20"
   time: "13:00 - 17:00"
