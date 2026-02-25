@@ -1,7 +1,7 @@
 
 - date: "2026-02-23"
   time: "13:00 - 17:00"
-  is_off: false
+  is_off: true
   is_online: false
 - date: "2026-02-24"
   time: "15:00 - 19:30"
