@@ -1,0 +1,31 @@
+name: Cloudflare Scheduled Build
+
+on:
+  schedule:
+    # Runs every 12 hours (at 00:01, 12:01 UTC)
+    - cron: '1 */12 * * *'
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  call-url:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Cloudflare Build Trigger URL
+        run: |
+          if [ -z "${{ secrets.CLOUDFLARE_BUILD_TRIGGER_URL }}" ]; then
+            echo "❌ TARGET_URL secret is not set"
+            exit 1
+          fi
+          echo "🔄 Calling URL from secrets..."
+          response=$(curl -s -o /dev/null -w "%{http_code}" -X POST "${{ secrets.CLOUDFLARE_BUILD_TRIGGER_URL }}")
+          if [ $response -eq 200 ]; then
+            echo "✅ URL call successful (HTTP $response)"
+          else
+            echo "⚠️ URL call returned HTTP $response"
+          fi
+          echo "📅 Called at: $(date -u)"
+        env:
+          TARGET_URL: ${{ secrets.CLOUDFLARE_BUILD_TRIGGER_URL }}
+      - name: Log execution
+        run: |
+          echo "🕐 Scheduled execution completed at $(date -u)"
