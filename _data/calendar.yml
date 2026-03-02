@@ -1,32 +1,4 @@
 
-- date: "2026-02-23"
-  time: "13:00 - 17:00"
-  is_off: false
-  is_online: false
-- date: "2026-02-24"
-  time: "15:00 - 19:30"
-  is_off: false
-  is_online: false
-- date: "2026-02-25"
-  time: "13:00 - 17:00"
-  is_off: false
-  is_online: false
-- date: "2026-02-26"
-  time: "15:00 - 19:30"
-  is_off: false
-  is_online: false
-- date: "2026-02-27"
-  time: "13:00 - 17:00"
-  is_off: false
-  is_online: false
-- date: "2026-02-28"
-  time: "12:00 - 16:00"
-  is_off: false
-  is_online: false
-- date: "2026-03-01"
-  time: ""
-  is_off: true
-  is_online: false
 - date: "2026-03-02"
   time: "13:00 - 17:00"
   is_off: false
@@ -52,6 +24,34 @@
   is_off: false
   is_online: false
 - date: "2026-03-08"
+  time: ""
+  is_off: true
+  is_online: false
+- date: "2026-03-09"
+  time: "13:00 - 17:00"
+  is_off: false
+  is_online: false
+- date: "2026-03-10"
+  time: "15:00 - 19:30"
+  is_off: false
+  is_online: false
+- date: "2026-03-11"
+  time: "13:00 - 17:00"
+  is_off: false
+  is_online: false
+- date: "2026-03-12"
+  time: "15:00 - 19:30"
+  is_off: false
+  is_online: false
+- date: "2026-03-13"
+  time: "13:00 - 17:00"
+  is_off: false
+  is_online: false
+- date: "2026-03-14"
+  time: "12:00 - 16:00"
+  is_off: false
+  is_online: false
+- date: "2026-03-15"
   time: ""
   is_off: true
   is_online: false
