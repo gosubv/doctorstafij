@@ -1,56 +1,56 @@
-- date: "2026-06-08"
+- date: "2026-06-29"
   time: "13:00 - 17:00"
   is_off: false
   is_online: false
-- date: "2026-06-09"
+- date: "2026-06-30"
   time: "15:00 - 19:30"
   is_off: false
   is_online: false
-- date: "2026-06-10"
+- date: "2026-07-01"
   time: "13:00 - 17:00"
   is_off: false
   is_online: false
-- date: "2026-06-11"
+- date: "2026-07-02"
   time: "15:00 - 19:30"
   is_off: false
   is_online: false
-- date: "2026-06-12"
+- date: "2026-07-03"
   time: "13:00 - 17:00"
   is_off: false
   is_online: false
-- date: "2026-06-13"
+- date: "2026-07-04"
   time: "12:00 - 16:00"
   is_off: false
   is_online: false
-- date: "2026-06-14"
+- date: "2026-07-05"
   time: ""
   is_off: true
   is_online: false
-- date: "2026-06-15"
+- date: "2026-07-06"
   time: "13:00 - 17:00"
   is_off: false
   is_online: false
-- date: "2026-06-16"
+- date: "2026-07-07"
   time: "15:00 - 19:30"
   is_off: false
   is_online: false
-- date: "2026-06-17"
+- date: "2026-07-08"
   time: "13:00 - 17:00"
   is_off: false
   is_online: false
-- date: "2026-06-18"
+- date: "2026-07-09"
   time: "15:00 - 19:30"
   is_off: false
   is_online: false
-- date: "2026-06-19"
+- date: "2026-07-10"
   time: "13:00 - 17:00"
   is_off: false
   is_online: false
-- date: "2026-06-20"
+- date: "2026-07-11"
   time: "12:00 - 16:00"
   is_off: false
   is_online: false
-- date: "2026-06-21"
+- date: "2026-07-12"
   time: ""
   is_off: true
   is_online: false
