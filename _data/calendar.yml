@@ -56,15 +56,15 @@
   is_online: false
 - date: "2026-08-24"
   time: "13:00 - 17:00"
-  is_off: true
+  is_off: false
   is_online: true
 - date: "2026-08-25"
   time: "15:00 - 19:30"
-  is_off: true
+  is_off: false
   is_online: true
 - date: "2026-08-26"
   time: "13:00 - 17:00"
-  is_off: true
+  is_off: false
   is_online: true
 - date: "2026-08-27"
   time: "15:00 - 19:30"
