@@ -19,7 +19,7 @@
   is_off: false
   is_online: false
 - date: "2026-09-12"
-  time: "09:00 - 14:00"
+  time: "09:00 - 12:00"
   is_off: false
   is_online: false
 - date: "2026-09-13"
@@ -47,7 +47,7 @@
   is_off: false
   is_online: false
 - date: "2026-09-19"
-  time: "09:00 - 14:00"
+  time: "09:00 - 12:00"
   is_off: false
   is_online: false
 - date: "2026-09-20"

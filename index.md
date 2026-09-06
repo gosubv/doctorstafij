@@ -89,20 +89,22 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
         <h2 class="section-title services-title">Виды консультаций</h2>
         <div class="card-grid">
             {% for item in site.data.services %}
-                <div class="card price-item">
-                    <h3>{{ item.title }}</h3>
-                    <span>{{ item.text }}</span>
-                    <span class="price-val"><p><b>{{ item.duration }}</b></p></span>
-                    <span class="price-val"><p><b>{{ item.price }}</b></p></span>
-                    <span class="price-val"><p><b>{{ item.price_online }}</b></p></span>
-                    <span class="price-val"><p><b>{{ item.price_repeating }}</b></p></span>
-                    <span class="price-val"><p><b>{{ item.paying }}</b></p></span>
-                    <span class="price-val">
-                        <div><a href='https://wa.me/{{ site.author.phonewhatsapp }}?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию {{ item.button_text }}.' class='cta-button btn-whatsapp' target='_blank'>
-                        {% include whatsapp.html %}
-                        Записаться на консультацию {{ item.button_text }}</a></div>
-                    </span>
-                </div>
+                {% if item.is_off == false %}
+                    <div class="card price-item">
+                        <h3>{{ item.title }}</h3>
+                        <span>{{ item.text }}</span>
+                        <span class="price-val"><p><b>{{ item.duration }}</b></p></span>
+                        <span class="price-val"><p><b>{{ item.price }}</b></p></span>
+                        <span class="price-val"><p><b>{{ item.price_online }}</b></p></span>
+                        <span class="price-val"><p><b>{{ item.price_repeating }}</b></p></span>
+                        <span class="price-val"><p><b>{{ item.paying }}</b></p></span>
+                        <span class="price-val">
+                            <div><a href='https://wa.me/{{ site.author.phonewhatsapp }}?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию {{ item.button_text }}.' class='cta-button btn-whatsapp' target='_blank'>
+                            {% include whatsapp.html %}
+                            Записаться на консультацию {{ item.button_text }}</a></div>
+                        </span>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>
