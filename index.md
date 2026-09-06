@@ -110,7 +110,7 @@ title: Доктор Стафий | Эндокринолог-нутрициоло
     </div>
 </section>
 
-<section id="consultation-details" class="consultation-section">
+<section id="consultation-details" class="consultation-section" style="display: none;">
     <div class="container">
         <div class="consultation-notice">
             <h3>⚠ Обратите внимание!</h3>
