@@ -14,5 +14,5 @@
   price_online: "<div class='meta-box'><div class='meta-icon'>📱</div><div class='meta-content'><span class='meta-label'>Онлайн консультация</span><span class='meta-desc'>(звонок Whatsapp или по телефону): </span><span class='meta-value'>15 000 ₸</span></div></div>"
   price_repeating: "<div class='meta-box'><div class='meta-icon'>🔄</div><div class='meta-content'><span class='meta-label'>Повторная консультация: </span><span class='meta-desc'>(в течении 1 месяца после первичного приема): </span><span class='meta-value'>15 000 ₸</span></div></div>"
   paying: "<div class='payment-container'><span class='payment-title'>Способы оплаты:</span><div class='payment-badges'><span class='pay-badge pay-cash'>💵 Наличные</span><span class='pay-badge pay-kaspi'>🔴 Kaspi QR</span><span class='pay-badge pay-online'>💳 Онлайн</span></div></div>"
-  button_text: "нутрициолога"
+  button_text: "эндокринолога-нутрициолога"
   is_off: false
