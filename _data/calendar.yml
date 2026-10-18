@@ -17,11 +17,11 @@
 - date: "2026-10-23"
   time: "09:00 - 14:00"
   is_off: false
-  is_online: true
+  is_online: false
 - date: "2026-10-24"
   time: "09:00 - 12:00"
   is_off: false
-  is_online: true
+  is_online: false
 - date: "2026-10-25"
   time: ""
   is_off: true
